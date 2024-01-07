@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meghna Chandra - Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Rubik+Doodle+Shadow&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- Add Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles if needed */
+        body {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            background-color:#cfdbd5;
+            color: black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes shrinkHeader {
+            from {
+                height: 100vh;
+            }
+            to {
+                height: 15vh; /* Adjust this value based on your desired height */
+            }
+        }
+
+        @keyframes expandHeader {
+            from {
+                height: 15vh;
+            }
+            to {
+                height: 100vh; /* Adjust this value based on your desired height */
+            }
+        }
+
+
+        #projects {
+            background-color: #242423;
+        }
+
+        #contact {
+            background-color: #333533;
+        }
+
+        .fade-out {
+        transition: opacity 1s ease-out;
+        opacity: 0;
+    }
+
+    .fade-in {
+        transition: opacity 1s ease-in;
+        opacity: 1;
+    }
+
+    #contact img {
+        height: 8vh;
+    }
+
+
+
+
+  
+    </style>
+</head>
+<body class="bg-white font-sans">
+
+    <header>
+        <div class = "pt-7">
+        <h1 class="text-3xl font-bold" style = "font-family: 'Rubik Doodle Shadow', system-ui;">Meghna Chandra</h1>
+        <p style = "font-family: 'Source Code Pro', monospace;">Web Developer</p>
+        </div>
+       <div id = "image" style = "border: 1px solid black;" class = "rounded-3xl">
+            <img src = "me.png" class = "h-64">
+        </div>
+        
+        
+        <p id="intro-text" style = "font-family: 'Source Code Pro', monospace;" class = "p-6">Hello! I love creating interactive and aesthetically pleasing digital environments. <br>
+            My proficiency lies in HTML, CSS, and Vanilla JS, the fundamental building blocks of the web. </p>
+
+        <div class = "p-2">
+        <p id = "intro-text-2" style = "font-family: 'Source Code Pro', monospace;"> Always trying to learn new stuff and get better at what I do. <br> Check out my projects :) </p>
+            <button id = "scroll-icon">
+                <img src="icons8-down.gif" alt="Scroll down" class = "h-8" style="opacity: 0.8; border-radius: 20px;"> <!-- Add your scroll down icon here -->
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-9xl">
+       
+        
+        
+                <section id="projects" class="rounded shadow p-4 text-center">
+                    <h1 class="text-2xl font-bold mb-4 py-4 tracking-widest" style = "font-family: 'Source Code Pro', monospace; color: #f5cb5c;"><u>Projects</u></h1>
+                    <div class="flex flex-wrap justify-center items-center"> <!-- Add flex-col here -->
+                
+                        <!-- Project Card 1 -->
+                        <div class="max-w-md m-4 rounded-lg overflow-hidden shadow-md flex items-center"  style = "background-color: #e8eddf; font-family: 'Fira Code', monospace;">
+                            <img src="rps-1.jpeg" alt="Project 1 Image" class="w-1/2 h-full object-cover">
+                            <div class="p-4 w-1/2">
+                                <h3 class="text-lg font-medium mb-2">Rock Paper Scissors</h3>
+                                <p class="text-gray-700 py-4 text-xs description">The Rock, Paper, Scissors web game is an interactive project built using HTML, CSS, and JavaScript, allowing users to engage in the classic game against a computer opponent.</p>
+                                <div class="mt-4">
+                                    <button class = "shadow-md text-xs my-2" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">Demo</button>
+                                    <button class = "shadow-md text-xs" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Project Card 2 -->
+                        <div class="max-w-md m-4 bg-white rounded-lg overflow-hidden shadow-md flex items-center"  style = "background-color: #e8eddf; font-family: 'Fira Code', monospace;">
+                            <img src="etchasketch.jpeg" alt="Project 2 Image" class="w-1/2 h-full object-cover">
+                            <div class="p-4 w-1/2">
+                                <h3 class="text-lg font-medium mb-2">Etch a Sketch</h3>
+                                <p class="text-gray-700 text-xs py-4 description">This drawing canvas allows users to change grid sizes. 
+                                    Colors can be easily customized. The app also supports the download feature, enabling users to save their work locally and share them with others.
+                                </p>
+                                <div class="mt-4 text-xs">
+                                    <button class = "shadow-md my-2" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">Demo</button>
+                                    <button class = "shadow-md" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Project Card 3 -->
+                        <div class="max-w-md m-4 bg-white rounded-lg overflow-hidden shadow-md flex items-center"  style = "background-color: #e8eddf; font-family: 'Fira Code', monospace;">
+                            <img src="calculator.jpeg" alt="Project 3 Image" class="w-1/2 h-full object-cover">
+                            <div class="p-4 w-1/2">
+                                <h3 class="text-lg font-medium mb-2">Calculator</h3>
+                                <p class="text-gray-700 text-xs description">This Web Calculator project is a user-friendly and functional application built using HTML, CSS, and JS. It supports standard arithmetic operations.
+                                    It also incorporates interactive features, such as keyboard support. 
+                                </p>
+                                <div class="mt-4 text-xs">
+                                    <button class = " my-2 shadow-md" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">Demo</button>
+                                    <button class = "shadow-md" style = "background-color: #f5cb5c;border: none;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </section>
+                
+        
+        
+        
+
+        <section id="contact" class="bg-white rounded shadow">
+            
+            <h1 class="text-2xl font-bold mb-4 py-4 tracking-widest text-center" style = "font-family: 'Source Code Pro', monospace; color: #f5cb5c;">
+                <u>Get in Touch?</u>
+            </h1>
+
+            <div class = "flex items-center justify-center py-10">
+                <img class = "p-2" src = "github.png">
+                <img class ="p-2" src = "twitter.png">
+                <img class = "p-2"src = "linkedin.png">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let isShrunk = false;
+
+document.getElementById("scroll-icon").addEventListener("click", function() {
+    if (!isShrunk) {
+        // Shrink header
+        document.querySelector("header").style.animation = "shrinkHeader 3s ease-in-out forwards";
+        // Add the fade-out class to the elements
+        document.getElementById("intro-text").classList.add("fade-out");
+        document.getElementById("intro-text-2").classList.add("fade-out");
+        document.getElementById("image").classList.add("fade-out");
+        // Rotate the scroll icon
+        document.getElementById("scroll-icon").style.transform = "rotate(180deg)";
+        document.getElementById("scroll-icon").style.opacity = "0.6"
+        // After the transition ends, set display to none
+        setTimeout(function() {
+            document.getElementById("intro-text").style.display = "none";
+            document.getElementById("intro-text-2").style.display = "none";
+            document.getElementById("image").style.display = "none";
+        }, 1500); // The timeout should be the same as the transition duration
+        isShrunk = true;
+    } else {
+        // Expand header
+        document.querySelector("header").style.animation = "expandHeader 3s ease-in-out forwards";
+        // Remove the fade-out class and add fade-in class to the elements
+        document.getElementById("intro-text").classList.remove("fade-out");
+        document.getElementById("intro-text").classList.add("fade-in");
+        document.getElementById("intro-text-2").classList.remove("fade-out");
+        document.getElementById("intro-text-2").classList.add("fade-in");
+        document.getElementById("image").classList.remove("fade-out");
+        document.getElementById("image").classList.add("fade-in");
+        // Rotate the scroll icon back
+        document.getElementById("scroll-icon").style.transform = "rotate(0deg)";
+        // After the transition ends, set display to block
+        setTimeout(function() {
+            document.getElementById("intro-text").style.display = "block";
+            document.getElementById("intro-text-2").style.display = "block";
+            document.getElementById("image").style.display = "block";
+        }, 1500); // The timeout should be the same as the transition duration
+        isShrunk = false;
+    }
+});
+
+      
+        
+    </script>
+ 
+</body>
+</html>
