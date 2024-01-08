@@ -18,7 +18,7 @@
         }
 
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
             width: 100%;
             height: 100vh;
@@ -59,16 +59,15 @@
             background-color: #333533;
         }
 
-        .fade-out {
+.fade-out {
         transition: opacity 1s ease-out;
         opacity: 0;
     }
 
     .fade-in {
-        transition: opacity 1s ease-in;
-        opacity: 1;
-    }
-
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
     #contact img {
         height: 8vh;
     }
@@ -82,20 +81,18 @@
 <body class="bg-white font-sans">
 
     <header>
-        <div class = "mt-10">
+        <div class = "mt-9">
         <h1 class="text-3xl font-bold" style = "font-family: 'Rubik Doodle Shadow', system-ui;">Meghna Chandra</h1>
         <p style = "font-family: 'Source Code Pro', monospace;">Web Developer</p>
         </div>
-       <div id = "image" style = "border: 1px solid black;" class = "rounded-3xl">
-            <img src = "me.png" class = "h-64">
-        </div>
+      
        
         
         
         <p id="intro-text" style = "font-family: 'Source Code Pro', monospace;" class = "text-sm p-6">Hello! I love creating interactive and aesthetically pleasing digital environments. <br>
             My proficiency lies in HTML, CSS, and Vanilla JS, the fundamental building blocks of the web. </p>
 
-        <div class = "text-sm">
+        <div  class = "text-sm">
         <p id = "intro-text-2" style = "font-family: 'Source Code Pro', monospace;"> Always trying to learn new stuff and get better at what I do. <br> Check out my projects :) </p>
         <button id = "scroll-icon" class = "mb-4">
             <img src="icons8-down.gif" alt="Scroll down" class = "h-9" style="opacity: 0.8; border-radius: 20px;"> <!-- Add your scroll down icon here -->
@@ -108,7 +105,7 @@
         
         
                 <section id="projects" class="rounded shadow p-4 text-center">
-                    <h1 class="text-2xl font-bold mb-4 py-4 tracking-widest" style = "font-family: 'Source Code Pro', monospace; color: #f5cb5c;"><u>Projects</u></h1>
+                    <h1 class="text-2xl font-bold mt-28 tracking-widest" style = "font-family: 'Source Code Pro', monospace; color: #f5cb5c;"><u>Projects</u></h1>
                     <div class="flex flex-wrap justify-center items-center"> <!-- Add flex-col here -->
                 
                         <!-- Project Card 1 -->
@@ -198,53 +195,79 @@
             </div>
         </section>
     </main>
-
+    
     <script>
         let isShrunk = false;
+        let lastScrollTop = 0;
+    
+        window.addEventListener("scroll", function() {
+            let st = window.scrollY || document.documentElement.scrollTop;
+    
+            if (st > lastScrollTop) {
+                // Scrolling down
+                if (!isShrunk) {
+                    // Shrink header
+                    shrinkHeader();
+                }
+            } else {
+                // Scrolling up
+                // You can add additional logic here if needed
+            }
+    
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        });
+    
+        document.getElementById("scroll-icon").addEventListener("click", function() {
+            if (isShrunk) {
+                // Expand header when the scroll icon is clicked
+                expandHeader();
+            } else {
+                // Shrink header when the scroll icon is clicked
+                shrinkHeader();
+            }
+        });
+    
+        // Function to shrink the header
+        function shrinkHeader() {
+            document.querySelector("header").style.animation = "shrinkHeader 1.5s ease-in-out forwards";
+            document.getElementById("intro-text").classList.add("fade-out");
+            document.getElementById("intro-text-2").classList.add("fade-out");
+    
+            document.getElementById("scroll-icon").style.transform = "rotate(180deg)";
+            document.getElementById("scroll-icon").style.opacity = "0.6";
+    
+            // Scroll to the top of the page
+            setTimeout(function() {
+                document.getElementById("intro-text").style.display = "none";
+                document.getElementById("intro-text-2").style.display = "none";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 1500);
+    
+            isShrunk = true;
+        }
+    
+        // Function to expand the header
+        function expandHeader() {
+            document.querySelector("header").style.animation = "expandHeader 1.5s ease-in-out forwards";
+            document.getElementById("intro-text").classList.remove("fade-out");
+            document.getElementById("intro-text-2").classList.remove("fade-out");
 
-document.getElementById("scroll-icon").addEventListener("click", function() {
-    if (!isShrunk) {
-        // Shrink header
-        document.querySelector("header").style.animation = "shrinkHeader 3s ease-in-out forwards";
-        // Add the fade-out class to the elements
-        document.getElementById("intro-text").classList.add("fade-out");
-        document.getElementById("intro-text-2").classList.add("fade-out");
-        document.getElementById("image").classList.add("fade-out");
-        // Rotate the scroll icon
-        document.getElementById("scroll-icon").style.transform = "rotate(180deg)";
-        document.getElementById("scroll-icon").style.opacity = "0.6"
-        // After the transition ends, set display to none
-        setTimeout(function() {
-            document.getElementById("intro-text").style.display = "none";
-            document.getElementById("intro-text-2").style.display = "none";
-            document.getElementById("image").style.display = "none";
-        }, 1500); // The timeout should be the same as the transition duration
-        isShrunk = true;
-    } else {
-        // Expand header
-        document.querySelector("header").style.animation = "expandHeader 3s ease-in-out forwards";
-        // Remove the fade-out class and add fade-in class to the elements
-        document.getElementById("intro-text").classList.remove("fade-out");
-        document.getElementById("intro-text").classList.add("fade-in");
-        document.getElementById("intro-text-2").classList.remove("fade-out");
-        document.getElementById("intro-text-2").classList.add("fade-in");
-        document.getElementById("image").classList.remove("fade-out");
-        document.getElementById("image").classList.add("fade-in");
-        // Rotate the scroll icon back
-        document.getElementById("scroll-icon").style.transform = "rotate(0deg)";
-        // After the transition ends, set display to block
-        setTimeout(function() {
-            document.getElementById("intro-text").style.display = "block";
-            document.getElementById("intro-text-2").style.display = "block";
-            document.getElementById("image").style.display = "block";
-        }, 1500); // The timeout should be the same as the transition duration
-        isShrunk = false;
-    }
-});
-
-      
-        
+            document.getElementById("intro-text").classList.add("fade-in");
+            document.getElementById("intro-text-2").classList.add("fade-in");
+    
+            document.getElementById("scroll-icon").style.transform = "rotate(0deg)";
+    
+            // Remove fade-out class after a delay
+            setTimeout(function() {
+                document.getElementById("intro-text").style.display = "block";
+                document.getElementById("intro-text-2").style.display = "block";
+            }, 500);
+    
+            isShrunk = false;
+        }
     </script>
- 
+    
+    
+    
 </body>
 </html>
