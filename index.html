@@ -73,7 +73,9 @@
     }
 
 
-
+#projects a:hover{
+    font-size: larger;
+}
 
   
     </style>
@@ -115,16 +117,16 @@
                                 <h3 class="text-lg font-medium mb-2">Rock Paper Scissors</h3>
                                 <p class="text-gray-700 py-4 text-xs description">The Rock, Paper, Scissors web game is an interactive project built using HTML, CSS, and JavaScript, allowing users to engage in the classic game against a computer opponent.</p>
                                 <div class="mt-4">
-                                    <button class = "shadow-md text-xs my-2" style = "background-color: #f5cb5c;border: none;
+                                    <a class = "shadow-md text-xs my-2" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">Demo</button>
-                                    <button class = "shadow-md text-xs" style = "background-color: #f5cb5c;border: none;
+                                    display: inline-block;" href = "https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank">Demo</a>
+                                    <a class = "shadow-md text-xs" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">GitHub</button>
+                                    display: inline-block;" href = "https://github.com/m3ghnaa/rock-paper-scissors" target="_blank">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -137,17 +139,17 @@
                                 <p class="text-gray-700 text-xs py-4 description">This drawing canvas allows users to change grid sizes. 
                                     Colors can be easily customized. The app also supports the download feature, enabling users to save their work locally and share them with others.
                                 </p>
-                                <div class="mt-4 text-xs">
-                                    <button class = "shadow-md my-2" style = "background-color: #f5cb5c;border: none;
+                                <div class="mt-4">
+                                    <a class = "text-xs shadow-md my-2" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">Demo</button>
-                                    <button class = "shadow-md" style = "background-color: #f5cb5c;border: none;
+                                    display: inline-block;" href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank">Demo</a>
+                                    <a class = "text-xs shadow-md" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">GitHub</button>
+                                    display: inline-block;" href = "https://github.com/m3ghnaa/etch-a-sketch" target="_blank">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -160,17 +162,17 @@
                                 <p class="text-gray-700 text-xs description">This Web Calculator project is a user-friendly and functional application built using HTML, CSS, and JS. It supports standard arithmetic operations.
                                     It also incorporates interactive features, such as keyboard support. 
                                 </p>
-                                <div class="mt-4 text-xs">
-                                    <button class = " my-2 shadow-md" style = "background-color: #f5cb5c;border: none;
+                                <div class="mt-4">
+                                    <a class = "text-xs my-2 shadow-md" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">Demo</button>
-                                    <button class = "shadow-md" style = "background-color: #f5cb5c;border: none;
+                                    display: inline-block;" href = "https://m3ghnaa.github.io/calculator/" target="_blank">Demo</a>
+                                    <a class = "text-xs shadow-md" style = "background-color: #f5cb5c;border: none;
                                     padding: 10px;
                                     text-align: center;
                                     text-decoration: none;
-                                    display: inline-block;">GitHub</button>
+                                    display: inline-block;" href = "https://github.com/m3ghnaa/calculator" target="_blank">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -189,9 +191,9 @@
             </h1>
 
             <div class = "flex items-center justify-center py-4">
-                <img class = "p-2" src = "github.png">
-                <img class ="p-2" src = "twitter.png">
-                <img class = "p-2"src = "linkedin.png">
+                <a href = "https://github.com/m3ghnaa" target="_blank"><img class = "p-2" src = "github.png"></a>
+                <a href = "https://twitter.com/m3ghna_" target="_blank"><img class ="p-2" src = "twitter.png"></a>
+                <a href = "https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank"><img class = "p-2"src = "linkedin.png"></a>
             </div>
         </section>
     </main>
@@ -209,10 +211,7 @@
                     // Shrink header
                     shrinkHeader();
                 }
-            } else {
-                // Scrolling up
-                // You can add additional logic here if needed
-            }
+            } 
     
             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
         });
