@@ -232,7 +232,8 @@
             document.querySelector("header").style.animation = "shrinkHeader 1.5s ease-in-out forwards";
             document.getElementById("intro-text").classList.add("fade-out");
             document.getElementById("intro-text-2").classList.add("fade-out");
-    
+            document.getElementById("intro-text").classList.remove("fade-in");
+            document.getElementById("intro-text-2").classList.remove("fade-in");
             document.getElementById("scroll-icon").style.transform = "rotate(180deg)";
             document.getElementById("scroll-icon").style.opacity = "0.6";
     
