@@ -7,14 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico+Shadow&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <!-- Add Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Additional custom styles if needed */
         body {
             margin: 0;
             padding: 0;
-            
         }
 
         header {
@@ -53,57 +51,18 @@
             background-color: #d0d0d0;
         }
 
-.fade-out {
-        transition: opacity 1s ease-out;
-        opacity: 0;
-    }
+      
 
-    .fade-in {
-    opacity: 1;
-    transition: opacity 1s ease-in;
-}
-    #contact img {
-        height: 6vh;
-    }
-
-
-#projects a:hover{
-    font-size: larger;
-}
-
-.card {
-    border-left: 5px solid #ffffe0;
-}
-
-#polaroid {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    overflow: hidden; 
-    position: relative;
-  }
-
-  #polaroid img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    opacity: 0; /* Initially hide the image */
-    transition: opacity 2s ease;
-  }
-
-  #polaroid p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-  }
-
-  /* Fade-in animation */
-  .fade-in {
-            
-            opacity: 1 !important;
+        #contact img {
+            height: 6vh;
         }
+
+
+        #projects a:hover{
+            font-size: larger;
+        }
+
+   
 
    /* Slide-in animation */
    @keyframes slideIn {
@@ -154,20 +113,23 @@
             position: relative;
             width: 300px;
             height: 600px;
-            background-color: #333;
+            background-color: #868585;
             border-radius: 30px;
             overflow: hidden;
+            -webkit-box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
         }
 
         .screen {
             position: absolute;
-            top: 40px;
+            top: 30px;
             left: 20px;
             right: 20px;
-            bottom: 80px; /* Adjusted to make space for the power button */
+            bottom: 70px; /* Adjusted to make space for the power button */
             background-color: #fff;
             border-radius: 20px;
-            overflow: hidden;
+            overflow:hidden;
         }
 
         .image {
@@ -176,6 +138,7 @@
             background-image: url('me.jpeg');
             background-size: cover;
             background-position: center;
+            opacity: 0.9
          
         }
 
@@ -211,8 +174,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 80px;
-            background-color: #333;
+            height: 70px;
+            background-color: #868585;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -233,11 +196,14 @@
         }
 
         .power-button {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: green;
             border-radius: 50%;
             cursor: pointer;
+            -webkit-box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
         }
 
  
@@ -247,36 +213,6 @@
 <body class="bg-white font-sans">
 
     <header>
-        <!-- <div class = "mt-9">
-        <h1 class="text-3xl font-bold" style = "font-family: 'Rubik Doodle Shadow', system-ui;">Meghna Chandra</h1>
-        <p style = "font-family: 'Source Code Pro', monospace;">Web Developer</p>
-        </div>
-      
-       
-        
-        
-        <p id="intro-text" style = "font-family: 'Source Code Pro', monospace;" class = "text-sm p-6">Hello! I love creating interactive and aesthetically pleasing digital environments. <br>
-            My proficiency lies in HTML, CSS, and Vanilla JS, the fundamental building blocks of the web. </p>
-
-        <div  class = "text-sm">
-        <p id = "intro-text-2" style = "font-family: 'Source Code Pro', monospace;"> Always trying to learn new stuff and get better at what I do. <br> Check out my projects :) </p>
-        <button id = "scroll-icon" class = "mb-4">
-            <img src="icons8-down.gif" alt="Scroll down" class = "h-9" style="opacity: 0.8; border-radius: 20px;"> 
-        </button>
-        </div>
-        
-        <div class = "w-full flex justify-around items-center">
-        <div id="polaroid">
-            <img src="me.jpeg" alt="me">
-            <h1 class="text-xl m-2 name tracking-widest" style = "font-family: 'Pacifico', cursive;">< Meghna Chandra /></h1>
-        </div>
-
-        <div class = "w-10 ">
-          <p style = "font-family: 'Source Code Pro', monospace;" class = "text-sm">Hello! I love creating interactive and aesthetically pleasing digital environments. <br>
-            My proficiency lies in HTML, CSS, and Vanilla JS, the fundamental building blocks of the web. Check out my projects!</p>
-        </div>
-        </div> -->
-
         <div id="phone">
             <div class="screen">
                 <div class="image"></div>
@@ -299,29 +235,29 @@
     </header>
 
     <main class="max-w-9xl">      
-                <section id="projects" class=" shadow p-4">
-                    <div class = "flex justify-start items-center p-8"><img src = "project.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-3xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Projects</h2></div>
-                    <div class="flex flex-wrap"> <!-- Add flex-col here -->
+        <section id="projects" class=" shadow p-4">
+            <div class = "flex justify-start items-center p-8"><img src = "project.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-2xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Projects</h2></div>
+                <div class="flex flex-wrap"> <!-- Add flex-col here -->
                 
-                        <!-- Project Card 1 -->
-                        <div class="max-w-full flex">
-                            <div class="p-4 w-screen m-4 shadow-md" style = " border-left: 20px solid #dbdb49; border-radius: 10px;">
-                                <h3 class="text-xl font-medium text-left tracking-wide">Rock Paper Scissors</h3>
-                                <p class="text-gray-400 py-4 text-md description text-left">The Rock, Paper, Scissors web game is an interactive project built using HTML, CSS, and JavaScript, allowing users to engage in the classic game against a computer opponent.</p>
-                                <div class="mt-2 text-right">
-                                    <a class = "shadow-md text-xs my-2 text-left" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank">Demo</a>
-                                    <a class = "shadow-md text-xs text-left" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://github.com/m3ghnaa/rock-paper-scissors" target="_blank">GitHub</a>
-                                </div>
+                    <!-- Project Card 1 -->
+                    <div class="max-w-full flex">
+                        <div class="p-4 w-screen m-4 shadow-md" style = " border-left: 20px solid #dbdb49; border-radius: 10px;">
+                            <h3 class="text-xl font-medium text-left tracking-wide">Rock Paper Scissors</h3>
+                            <p class="text-gray-400 py-4 text-md description text-left">The Rock, Paper, Scissors web game is an interactive project built using HTML, CSS, and JavaScript, allowing users to engage in the classic game against a computer opponent.</p>
+                            <div class="mt-2 text-right">
+                            <a class = "shadow-md text-xs my-2 text-left" style = "background-color: #dbdb49; border: none;
+                                padding: 10px;
+                                text-decoration: none;
+                                border-radius: 10px;
+                                display: inline-block;" href = "https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank">Demo</a>
+                                <a class = "shadow-md text-xs text-left" style = "background-color: #dbdb49; border: none;
+                                padding: 10px;
+                                text-decoration: none;
+                                border-radius: 10px;
+                                display: inline-block;" href = "https://github.com/m3ghnaa/rock-paper-scissors" target="_blank">GitHub</a>
                             </div>
                         </div>
+                    </div>
                 
                         <!-- Project Card 2 -->
                         <div class="max-w-full flex">
@@ -420,7 +356,7 @@
                 
         
        <section id = blog class = " p-4">
-        <div class = "flex justify-start items-center p-8"><img src = "blog.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-3xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Blog Articles</h2></div>
+        <div class = "flex justify-start items-center p-8"><img src = "blog.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-2xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Blog Articles</h2></div>
 
        <div class = "flex flex-col justify-center p-8">
         <a href = "https://m3ghna.hashnode.dev/interactive-web-forms-html-css-and-js-essentials" target="_blank"><h2 class = "font-bold hover:underline">  Interactive Web Forms: HTML, CSS, and JS Essentials <div class = "hashnode"> Hashnode </div></h2>
