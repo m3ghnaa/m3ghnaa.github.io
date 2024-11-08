@@ -3,485 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghna Chandra - Web Developer</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico+Shadow&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Shizuru&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+        /* Simple CSS animations */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .typewriter-container {
+            display: inline-block;
+            font-size: 2rem;
+            font-family: monospace;
+            overflow: hidden; /* Hides the overflowing text */
+            white-space: nowrap; /* Keeps the text on a single line */
+            animation: typing 4s steps(30, end) forwards; /* Typing animation */
+            width: 27ch; /* Width set based on character count of text */
+        }
+
+        /* Typewriter animation */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 27ch; }
+        }
+
+        /* Blinking cursor effect */
+        .typewriter-container::after {
+            content: ''; /* Empty content for blinking cursor */
+            border-right: 2px solid; /* Cursor effect */
+            animation: blink 0.75s step-end infinite; /* Blinking cursor animation */
+            position: relative;
+            top: 0;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Fullscreen Overlay for Initial Screen */
+        .initial-screen {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #22223b; /* Dark background */
+            flex-direction: column;
+        }
+
+        /* Ensuring the whole page is scrollable */
         body {
             margin: 0;
             padding: 0;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 1000;
-            background-color:#ffffe0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .content {
+            padding-top: 4rem;
+            background-color: #f2e9e4;
         }
 
-        @keyframes shrinkHeader {
-            from {
-                height: 100vh;
-            }
-            to {
-                height: 8vh; /* Adjust this value based on your desired height */
-            }
+        nav {
+            background-color: #4a4e69;
         }
 
-        @keyframes expandHeader {
-            from {
-                height: 8vh;
-            }
-            to {
-                height: 100vh; /* Adjust this value based on your desired height */
-            }
-        }
-
-
-        #blog {
-            background-color: #d0d0d0;
-        }
-
-      
-
-        #contact img {
-            height: 6vh;
-        }
-
-
-        #projects a:hover{
-            font-size: larger;
-        }
-
-   
-
-   /* Slide-in animation */
-   @keyframes slideIn {
-            from {
-                transform: translateX(-100%); /* Start from left */
-            }
-            to {
-                transform: translateX(0); /* Move to original position */
-            }
-        }
-
-    #polaroid img.slide-in {
-        animation: slideIn 1s ease forwards; /* Apply slide-in animation */
+        /* Button Styling */
+    .view-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #22223b;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.375rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 10;
     }
 
+    /* Card Content Styling */
+    .project-content {
+        transition: opacity 0.3s ease;
+    }
 
-#projects {
-    margin-top: 120px
-}
+    /* Hover Effect */
+    .project-card:hover .project-content {
+        opacity: 0;
+    }
 
-.medium {
-    background-color: black;
-            color: #fff;
-            border-radius: 4px;
-            padding: 4px 8px;
-            font-size: 12px;
-            margin-bottom: 8px;
-            display: inline;
-            width: 100px;
-            text-align: center;
-}
+    .project-card:hover .view-button {
+        opacity: 1;
+        visibility: visible;
+    }
 
-.hashnode {
-    background-color: blue;
-            color: #fff;
-            border-radius: 4px;
-            padding: 4px 8px;
-            font-size: 12px;
-            margin-bottom: 8px;
-            display: inline;
-            width: 100px;
-            text-align: center;
-}
-
-
-
-#phone {
-            position: relative;
-            width: 300px;
-            height: 600px;
-            background-color: #868585;
-            border-radius: 30px;
-            overflow: hidden;
-            -webkit-box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
-box-shadow: 6px 6px 13px -4px rgba(0,0,0,0.75);
-        }
-
-        .screen {
-            position: absolute;
-            top: 30px;
-            left: 20px;
-            right: 20px;
-            bottom: 70px; /* Adjusted to make space for the power button */
-            background-color: #fff;
-            border-radius: 20px;
-            overflow:hidden;
-        }
-
-        .image {
-            width: 100%;
-            height: 90%;
-            background-image: url('me.jpeg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.9
-         
-        }
-
-        .content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            color: green;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .screen.active .content {
-            opacity: 1;
-        }
-
-        .text {
-            font-size: 16px;
-            line-height: 1.5;
-            text-align: center;
-            font-family: 'Source Code Pro', monospace;
+    #blog {
+        background-color: #C9ADA7;
         
-        }
+    }
 
-        .footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            background-color: #868585;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 5px;
-            height: 18px;
-            background-color: green;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        .power-button {
-            width: 35px;
-            height: 35px;
-            background-color: green;
-            border-radius: 50%;
-            cursor: pointer;
-            -webkit-box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
-box-shadow: 0px 3px 13px -4px rgba(0,0,0,0.75);
-        }
-
- 
-
+  
     </style>
 </head>
-<body class="bg-white font-sans">
-
-    <header>
-        <div id="phone">
-            <div class="screen">
-                <div class="image"></div>
-                <p class = "text-md text-center font-bold tracking-wide" style = "font-family: 'Source Code Pro', monospace;"> < Meghna Chandra /> <br /> <span class = "text-gray-400 text-sm"> Web Developer</span></p>
-                <div class="content">
-                    <div class="text p-5">Hello! I love creating interactive and aesthetically pleasing digital environments. My proficiency lies in HTML, CSS, and Vanilla JS, the fundamental building blocks of the web. 
-                        Check out my projects!<span class="cursor"></span></div>
-                </div>
-            </div>
-            <div class="footer">
-                <div class="power-button" onclick="toggleScreen()">
-                <img src = "power.png">
-                </div>
-            </div>
-        </div>
-          <button id = "scroll-icon" class = "mb-4 mt-5" >
-            <img src="icons8-down.gif" alt="Scroll down" class = "h-9" style="opacity: 0.8; border-radius: 20px;"> 
+<body class="bg-gray-900 text-white font-sans">
+    <nav class="p-4 h-28 flex justify-between items-center fixed top-0 left-0 right-0 z-50 bg-gray-800 sm:rounded-br-full rounded-none">
+        <!-- Brand Image on the Left -->
+        <p class="text-6xl font-bold text-white flex items-center space-x-2 mx-auto sm:mx-0">
+            <span style="font-family: 'Shizuru', system-ui;">m</span>
+        </p>
+    
+        <!-- Hamburger Icon for Small Screens -->
+        <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+            <i class="fas fa-bars text-3xl"></i>
         </button>
-
-    </header>
-
-    <main class="max-w-9xl">      
-        <section id="projects" class=" shadow p-4">
-            <div class = "flex justify-start items-center p-8"><img src = "project.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-2xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Projects</h2></div>
-                <div class="flex flex-wrap"> <!-- Add flex-col here -->
-                
-                    <!-- Project Card 1 -->
-                    <div class="max-w-full flex">
-                        <div class="p-4 w-screen m-4 shadow-md" style = " border-left: 20px solid #dbdb49; border-radius: 10px;">
-                            <h3 class="text-xl font-medium text-left tracking-wide">Rock Paper Scissors</h3>
-                            <p class="text-gray-400 py-4 text-md description text-left">The Rock, Paper, Scissors web game is an interactive project built using HTML, CSS, and JavaScript, allowing users to engage in the classic game against a computer opponent.</p>
-                            <div class="mt-2 text-right">
-                            <a class = "shadow-md text-xs my-2 text-left" style = "background-color: #dbdb49; border: none;
-                                padding: 10px;
-                                text-decoration: none;
-                                border-radius: 10px;
-                                display: inline-block;" href = "https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank">Demo</a>
-                                <a class = "shadow-md text-xs text-left" style = "background-color: #dbdb49; border: none;
-                                padding: 10px;
-                                text-decoration: none;
-                                border-radius: 10px;
-                                display: inline-block;" href = "https://github.com/m3ghnaa/rock-paper-scissors" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                
-                        <!-- Project Card 2 -->
-                        <div class="max-w-full flex">
-                            <div class="p-4 w-screen m-4 shadow-md" style = "border-left: 20px solid #dbdb49; border-radius: 10px">
-                                <h3 class="text-xl font-medium mb-2 text-left tracking-wide">Etch a Sketch</h3>
-                                <p class="text-gray-400 text-md py-4 description text-left">This drawing canvas allows users to change grid sizes. 
-                                    Colors can be easily customized. The app also supports the download feature, enabling users to save their work locally and share them with others.
-                                </p>
-                                <div class="mt-2 text-right">
-                                    <a class = "text-xs shadow-md my-2" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank">Demo</a>
-                                    <a class = "text-xs shadow-md" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://github.com/m3ghnaa/etch-a-sketch" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- Project Card 3 -->
-                        <div class="max-w-full flex ">
-                            <div class="p-4 w-screen m-4 shadow-md" style = "border-left: 20px solid #dbdb49; border-radius: 10px;">
-                                <h3 class="text-xl font-medium mb-2 text-left tracking-wide">Calculator</h3>
-                                <p class="text-gray-400 text-md description text-left">This Web Calculator project is a user-friendly and functional application built using HTML, CSS, and JS. It supports standard arithmetic operations.
-                                    It also incorporates interactive features, such as keyboard support. 
-                                </p>
-                                <div class="mt-2 text-right">
-                                    <a class = "text-xs my-2 shadow-md" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://m3ghnaa.github.io/calculator/" target="_blank">Demo</a>
-                                    <a class = "text-xs shadow-md" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://github.com/m3ghnaa/calculator" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project Card 4 -->
-                        <div class="max-w-full flex">
-                            <div class="p-4 w-screen m-4 shadow-md" style = "border-left: 20px solid #dbdb49;  border-radius: 10px;">
-                                <h3 class="text-xl font-medium mb-2 text-left tracking-wide">Sign Up Form</h3>
-                                <p class="text-gray-400 py-4 text-md description text-left">Simple sign up form, created by using HTML, CSS, JS</p>
-                                <div class="mt-2 text-right">
-                                    <a class = "shadow-md text-xs my-2" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://m3ghnaa.github.io/sign-up-form/" target="_blank">Demo</a>
-                                    <a class = "shadow-md text-xs" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://github.com/m3ghnaa/sign-up-form" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project Card 5 -->
-                        <div class="max-w-full flex">
-                            <div class="p-4 w-screen m-4 shadow-md" style = "border-left: 20px solid #dbdb49; border-radius: 10px;">
-                                <h3 class="text-xl font-medium mb-2 text-left tracking-wide">Admin Dashboard</h3>
-                                <p class="text-gray-400 py-4 text-md description text-left">Dashboard layout created by using CSS Grid. Only for desktop/laptop view; not responsive</p>
-                                <div class="mt-2 text-right">
-                                    <a class = "shadow-md text-xs my-2" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://m3ghnaa.github.io/dashboard/" target="_blank">Demo</a>
-                                    <a class = "shadow-md text-xs" style = "background-color: #dbdb49; border: none;
-                                    padding: 10px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    border-radius: 10px;
-                                    display: inline-block;" href = "https://github.com/m3ghnaa/dashboard" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
-                </section>
-                
-        
-       <section id = blog class = " p-4">
-        <div class = "flex justify-start items-center p-8"><img src = "blog.png" style = "height: 35px; padding-right: 20px"><h2 class = "text-2xl tracking-wide underline" style = "font-family:'Fira Code', monospace; ;">Blog Articles</h2></div>
-
-       <div class = "flex flex-col justify-center p-8">
-        <a href = "https://m3ghna.hashnode.dev/interactive-web-forms-html-css-and-js-essentials" target="_blank"><h2 class = "font-bold hover:underline">  Interactive Web Forms: HTML, CSS, and JS Essentials <div class = "hashnode"> Hashnode </div></h2>
-            <p class = "text-gray-500">Forms are essential to web development, allowing users to interact with websites by submitting data. They are commonly used for various purposes -... </p>
-            <p class = "text-gray-400"> Published on Mar 22, 2024</p>
-        </a>
+    
+        <!-- Navbar Links (Visible on Medium+ Screens) -->
+        <ul class="hidden md:flex space-x-6 px-8 text-white" style="font-family: 'Montserrat', sans-serif;">
+            <li><a href="#projects" class="hover:text-gray-400 px-8">projects</a></li>
+            <li><a href="#blog" class="hover:text-gray-400 px-8">blog</a></li>
+            <li><a href="#contact" class="hover:text-gray-400 px-8">contact</a></li>
+        </ul>
+    
+        <!-- Collapsible Menu for Small Screens -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-gray-800 text-white p-4 rounded-br-full" style="font-family: 'Montserrat', sans-serif;">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#projects" class="hover:text-gray-400 block">projects</a></li>
+                <li><a href="#blog" class="hover:text-gray-400 block">blog</a></li>
+                <li><a href="#contact" class="hover:text-gray-400 block">contact</a></li>
+            </ul>
         </div>
-    <hr />
-        <div class = "flex flex-col justify-center p-8">
-            <a href = "https://medium.com/@meghn/self-acceptance-how-it-changed-my-perspective-about-self-love-9a32fc159d75" target="_blank"><h2 class = "font-bold hover:underline"> Self-Acceptance: How it changed my perspective about self-love. <div class = "medium"> Medium </div></h2>
-                <p class = "text-gray-500">If you’re reading this, you likely have voices in your head — voices that echo panic with every decision. They make you doubt yourself. </p>
-                <p class = "text-gray-400"> Published on Dec 17, 2023
-                    </p>
-            </a>
-            </div>
-    <hr />
-            <div class = "flex flex-col justify-center p-8">
-                <a href = "https://m3ghna.hashnode.dev/introduction-to-dom-manipulation-with-javascript" target="_blank"><h2 class = "font-bold hover:underline">Introduction to DOM Manipulation with Javascript <div class = "hashnode"> Hashnode </div></h2>
-                    <p class = "text-gray-500">Javascript’s DOM Manipulation: Key to Interactive Web Design · The goal of this article is to introduce the concept of the DOM (Document Object Model)... </p>
-                    <p class = "text-gray-400"> Published on Dec 11, 2023</p>
-                </a>
-                </div>
-       <hr />         
-             <div class = "flex flex-col justify-center p-8">
-                    <a href = "https://medium.com/@meghn/how-to-bullet-journal-for-absolute-beginners-1c845d70d74a" target="_blank"><h2 class = "font-bold hover:underline">  How To Bullet Journal — For Absolute Beginners <div class = "medium"> Medium </div></h2>
-                        <p class = "text-gray-500">Are you someone who is obsessed with making to-do lists? But then, nothing really works; it’s just to-do lists after to-do lists! No? Is… </p>
-                        <p class = "text-gray-400"> Published on Nov 11, 2023</p>
-                    </a>             
-            </div>
-        <hr />
-            <div class = "flex flex-col justify-center p-8">
-                <a href = "https://medium.com/@meghn/a-tale-of-two-lives-a-thought-provoking-writing-exercise-c5e84961c569" target="_blank"><h2 class = "font-bold hover:underline"> A Tale of Two Lives: A Thought-Provoking Writing Exercise <div class = "medium"> Medium </div></h2>
-                    <p class = "text-gray-500">In the book, The Bullet Journal Method, Ryder Carroll introduces some writing exercises to help readers get some clarity and the headspace… </p>
-                    <p class = "text-gray-400"> Published on Sep 30, 2023</p>
-                </a> 
-                </div>
-            <hr />
-                <div class = "flex flex-col justify-center p-8">
-                    <a href = "https://medium.com/@meghn/day-0-the-inertia-of-getting-started-6cad9db08254" target="_blank"><h2 class = "font-bold hover:underline">Day 0 — The Inertia of Getting Started <div class = "medium"> Medium </div></h2>
-                        <p class = "text-gray-500">I’ve been striving to improve my life for about 6 to 7 years now. I have tried things, I won't lie, half-heartedly. So, what I am feeling… </p>
-                        <p class = "text-gray-400"> Published on Sep 20, 2023</p>
-                    </a>
-                    </div>
-       </section>
+    </nav>
+    
+    
+    <!-- Initial Screen (Name, Designation, Photo) -->
+    <section class="initial-screen fade-in flex flex-col items-center text-center px-4">
+        <!-- Profile Picture -->
+        <img src="pic.png" alt="Profile Picture" class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mb-6">
         
+        <!-- Responsive Heading -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold typewriter-container" style="font-family: 'Montserrat', sans-serif;">
+            hello world! I'm meghna chandra.
+        </h1>
+    
+        <!-- Responsive Subtitle -->
+        <p class="mt-2 text-base sm:text-lg md:text-xl" style="font-family: 'Poiret One', sans-serif;">
+            web developer | JavaScript, HTML, CSS
+        </p>
+    </section>
+    
 
-        <section id="contact" class="bg-white shadow">
+<div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
 
-            <div class = "flex items-center justify-center py-4">
-                <a href = "https://github.com/m3ghnaa" target="_blank"><img class = "p-2" src = "github.png"></a>
-                <a href = "https://twitter.com/m3ghna_" target="_blank"><img class ="p-2" src = "twitter.png"></a>
-                <a href = "https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank"><img class = "p-2"src = "linkedin.png"></a>
+    <!-- Main Content -->
+    <div class="content">
+    
+        <!-- Projects Section -->
+        <section id="projects" class="mt-12 h-auto my-12 pl-8">
+            <div class = "flex justify-center">
+                <img src = "project.png" class = "h-12 px-4">
+                <h2 class="text-3xl font-semibold text-center slide-up mb-24 tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">
+                    my projects
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8 justify-center">
+                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
+                    <div class = "project-content">
+                    <h3 class="text-xl font-semibold">Task Manager</h3>
+                    <p class="mt-2">A simple task manager created using node.js and express. I tried to explore creating routes and implementing http methods.</p>
+                    </div>
+                    <button class = "view-button">View</button>
+                </div>
+                
+                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:-rotate-6" style = "background-color: #9a8c98;">
+                    <div class = "project-content">
+                    <h3 class="text-xl font-semibold">Admin Dashboard</h3>
+                    <p class="mt-2">I used CSS grid to clone a given design. This was part of The Odin Curriculum.</p>
+                    </div>
+                    <button class = "view-button">View</button>
+                </div>
+                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
+                    <div class = "project-content">
+                    <h3 class="text-xl font-semibold">Sign-Up Form</h3>
+                    <p class="mt-2">Just a simple form using HTML, CSS and JS. Tried to experiment a bit with animation.</p>
+                    </div>
+                    <button class = "view-button">View</button>
+                </div>
+                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:-rotate-6" style = "background-color: #9a8c98;">
+                    <div class = "project-content">
+                    <h3 class="text-xl font-semibold">Etch a Sketch</h3>
+                    <p class="mt-2">A drawing canvas creating using html css and js. Explored DOM Manipulation. User can change grid sizes, select colours and also download their art.</p>
+                    </div>
+                    <button class = "view-button">View</button>
+                </div>
+                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
+                    <div class = "project-content">
+                    <h3 class="text-xl font-semibold">Rock Paper Scissors</h3>
+                    <p class="mt-2">The classic game. Used some DOM Manipulation to make this as interactive as possible.</p>
+                    </div>
+                    <button class = "view-button">View</button>
+                </div>
             </div>
         </section>
-    </main>
-    
-    <script>
-        function toggleScreen() {
-        const screen = document.querySelector('.screen');
-        screen.classList.toggle('active');
- 
-        }
 
-        let isShrunk = false;
-        let lastScrollTop = 0;
+        <!-- Blog Section -->
+        <section id="blog" class="mb-16 text-center h-max py-24">
+            <h2 class="text-3xl font-semibold text-center slide-up tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">my blog</h2>
+            <p class = "text-xl px-32 mt-2 pt-12" style = "color:#655c64;">
+                I am not a big writer. I write only for the sake of gaining some clarity. If it helps someone who reads my articles is just a bonus. I have written a few articles on these two platforms.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8 place-items-center w-7/12 mx-auto">
+                <div class="w-80 h-22 border-2 flex justify-center" style = "border-color: #9a8c98;;">
+                    <img src = "medium-removebg-preview.png" class = "h-32">
+                </div>
+                <div class="w-80 h-22 border-2 flex justify-center" style = "border-color: #9a8c98;;">
+                    <img src = "images-removebg-preview.png" class = "h-32">
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="mb-16 text-center">
+            <h2 class="text-3xl font-semibold text-center slide-up tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">get in touch?</h2>
+            <div class="grid grid-cols-3 gap-4 mt-24 place-items-center w-96 mx-auto pb-12">
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com" target="_blank" class="flex justify-center items-center text-3xl text-blue-600 hover:text-blue-400 transition-colors duration-300">
+                    <i class="fab fa-linkedin h-14"></i>
+                </a>
+                
+                <!-- Twitter Icon -->
+                <a href="https://twitter.com" target="_blank" class="flex justify-center items-center text-3xl text-blue-400 hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-twitter h-14"></i>
+                </a>
+                
+                <!-- GitHub Icon -->
+                <a href="https://github.com" target="_blank" class="flex justify-center items-center text-3xl text-gray-800 hover:text-gray-600 transition-colors duration-300">
+                    <i class="fab fa-github h-14"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
     
-        window.addEventListener("scroll", function() {
-            let st = window.scrollY || document.documentElement.scrollTop;
-    
-            if (st > lastScrollTop) {
-                // Scrolling down
-                if (!isShrunk) {
-                    // Shrink header
-                    shrinkHeader();
-                }
-            } 
-    
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    
-        document.getElementById("scroll-icon").addEventListener("click", function() {
-            if (isShrunk) {
-                // Expand header when the scroll icon is clicked
-                expandHeader();
-            } else {
-                // Shrink header when the scroll icon is clicked
-                shrinkHeader();
-            }
-        });
-    
-        // Function to shrink the header
-        function shrinkHeader() {
-            document.querySelector("header").style.animation = "shrinkHeader 1.5s ease-in-out forwards";
-            document.getElementById("phone").classList.add("fade-out");
-            document.getElementById("phone").classList.remove("fade-in");
-            document.getElementById("scroll-icon").style.transform = "rotate(180deg)";
-            document.getElementById("scroll-icon").style.marginBottom = "-15px"
-            
-    
-            // Scroll to the top of the page
-            setTimeout(function() {
-                document.getElementById("phone").style.display = "none";
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            }, 1500);
-    
-            isShrunk = true;
-        }
-    
-        // Function to expand the header
-        function expandHeader() {
-            document.querySelector("header").style.animation = "expandHeader 1.5s ease-in-out forwards";
-            document.getElementById("phone").classList.remove("fade-out");
-            document.getElementById("phone").classList.add("fade-in");
-            document.getElementById("scroll-icon").style.transform = "rotate(0deg)";
-    
-            // Remove fade-out class after a delay
-            setTimeout(function() {
-                document.getElementById("phone").style.display = "block";
-            }, 500);
-    
-            isShrunk = false;
-        }
     </script>
-    
-    
-    
+
 </body>
 </html>
