@@ -3,421 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Developer Portfolio</title>
+    <title>Meghna - Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Shizuru&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Iceland&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rammetto+One&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
-*{
-    margin: 0px;
-    padding: 0px;
+        html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Exo', sans-serif;
-}
-
-
-.context {
-    width: 100%;
-    position: absolute;
-    
-}
-
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
-}
-
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-}
-
-
-
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
-}
-        /* Simple CSS animations */
-        .fade-in {
-            animation: fadeIn 1.5s ease-in;
-        }
-
-        .slide-up {
-            animation: slideUp 1s ease-out;
+        body {
+            background-color: #a4c3b2;
+            font-family: "Noto Sans", sans-serif;
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-
-        .typewriter-container {
-            display: inline-block;
-            font-size: 2rem;
-            font-family: monospace;
-            overflow: hidden; /* Hides the overflowing text */
-            white-space: nowrap; /* Keeps the text on a single line */
-            animation: typing 4s steps(30, end) forwards; /* Typing animation */
-            width: 27ch; /* Width set based on character count of text */
-        }
-
-        /* Typewriter animation */
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 27ch; }
-        }
-
-        /* Blinking cursor effect */
-        .typewriter-container::after {
-            content: ''; /* Empty content for blinking cursor */
-            border-right: 2px solid; /* Cursor effect */
-            animation: blink 0.75s step-end infinite; /* Blinking cursor animation */
-            position: relative;
-            top: 0;
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-
-        /* Fullscreen Overlay for Initial Screen */
-        .initial-screen {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #22223b; /* Dark background */
-            flex-direction: column;
-        }
-
-        /* Ensuring the whole page is scrollable */
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .content {
-            padding-top: 4rem;
-            background-color: #f2e9e4;
-        }
-
-        nav {
-            background-color: #4a4e69;
-        }
-
-        /* Button Styling */
-    .view-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #22223b;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 0.375rem;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-        font-size: 1rem;
-        cursor: pointer;
-        z-index: 10;
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Card Content Styling */
-    .project-content {
-        transition: opacity 0.3s ease;
+    .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out forwards;
     }
 
-    /* Hover Effect */
-    .project-card:hover .project-content {
-        opacity: 0;
+    .progress-bar {
+        transform-origin: left;
+        transition: transform 1.2s ease-in-out;
     }
-
-    .project-card:hover .view-button {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    #blog {
-        background-color: #C9ADA7;
-        
-    }
-
-  
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <nav class="p-4 h-28 flex justify-between items-center fixed top-0 left-0 right-0 z-50 bg-gray-800 sm:rounded-br-full rounded-none">
-        <!-- Brand Image on the Left -->
-        <p class="text-6xl font-bold text-white flex items-center space-x-2 mx-auto sm:mx-0">
-            <span style="font-family: 'Shizuru', system-ui;">m</span>
-        </p>
-    
-        <!-- Hamburger Icon for Small Screens -->
-        <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
-            <i class="fas fa-bars text-3xl"></i>
-        </button>
-    
-        <!-- Navbar Links (Visible on Medium+ Screens) -->
-        <ul class="hidden md:flex space-x-6 px-8 text-white" style="font-family: 'Montserrat', sans-serif;">
-            <li><a href="#projects" class="hover:text-gray-400 px-8">projects</a></li>
-            <li><a href="#blog" class="hover:text-gray-400 px-8">blog</a></li>
-            <li><a href="#contact" class="hover:text-gray-400 px-8">contact</a></li>
-        </ul>
-    
-        <!-- Collapsible Menu for Small Screens -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-gray-800 text-white p-4 rounded-br-full" style="font-family: 'Montserrat', sans-serif;">
-            <ul class="flex flex-col space-y-4">
-                <li><a href="#projects" class="hover:text-gray-400 block">projects</a></li>
-                <li><a href="#blog" class="hover:text-gray-400 block">blog</a></li>
-                <li><a href="#contact" class="hover:text-gray-400 block">contact</a></li>
-            </ul>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="flex flex-wrap justify-between items-center py-2 px-4 md:px-8 shadow-sm" style="background-color: #a4c3b2;">
+        <div class = "flex items-center md:w-auto">
+        <img src = "assets/meghna.svg" class="md:w-12 md:h-12 h-8 w-8">
+        <a class="text-xl text-left md:text-2xl lg:text-4xl" style = "font-family: 'Rammetto One', sans-serif; color: #eaf4f4" href = "#">m</h1>
         </div>
+        <a class = "pr-4 text-sm md:text-lg lg:text-xl p-2" style = "color: #eaf4f4" href = "projects.html">Projects</a>
     </nav>
-    
-    
-    <!-- Initial Screen (Name, Designation, Photo) -->
-    <section class="initial-screen fade-in flex flex-col items-center text-center px-4">
-        <!-- Profile Picture -->
-        <img src="pic.png" alt="Profile Picture" class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mb-6">
-        
-        <!-- Responsive Heading -->
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold typewriter-container" style="font-family: 'Montserrat', sans-serif;">
-            hello world! I'm meghna chandra.
-        </h1>
-    
-        <!-- Responsive Subtitle -->
-        <p class="mt-2 text-base sm:text-lg md:text-xl" style="font-family: 'Poiret One', sans-serif;">
-            web developer | JavaScript, HTML, CSS
-        </p>
-    </section>
-    
 
-<div class="area" >
-    <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-    </ul>
-</div >
-
-    <!-- Main Content -->
-    <div class="content">
-    
-        <!-- Projects Section -->
-        <section id="projects" class="mt-12 h-auto my-12 pl-8">
-            <div class = "flex justify-center">
-                <img src = "project.png" class = "h-12 px-4">
-                <h2 class="text-3xl font-semibold text-center slide-up mb-24 tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">
-                    my projects
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8 justify-center">
-                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
-                    <div class = "project-content">
-                    <h3 class="text-xl font-semibold">Task Manager</h3>
-                    <p class="mt-2">A simple task manager created using node.js and express. I tried to explore creating routes and implementing http methods.</p>
-                    </div>
-                    <button class = "view-button">View</button>
-                </div>
+    <!-- Main Content - Grid -->
+    <div class="flex-grow flex items-center justify-center px-4 py-8">
+        <div class="grid gap-4 w-full mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 
-                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:-rotate-6" style = "background-color: #9a8c98;">
-                    <div class = "project-content">
-                    <h3 class="text-xl font-semibold">Admin Dashboard</h3>
-                    <p class="mt-2">I used CSS grid to clone a given design. This was part of The Odin Curriculum.</p>
+                <!-- Introduction-->
+                <div class="flex flex-col items-center justify-center text-center rounded-3xl shadow-md p-6 col-span-1 md:col-span-3 md:row-span-2" style="background-color: #6b9080; color: #eaf4f4">
+                    <img src="assets/intro.svg" class="w-12 h-12 md:w-16 md:h-16">
+                    <h2 class="text-xl md:text-2xl lg:text-3xl tracking-wider" style="font-family: 'Anton SC', sans-serif;">Hello, I'm Meghna</h2>
+                    <p class="pt-2 text-lg md:text-xl lg:text-2xl tracking-wider mt-2 md:mt-8 lg:mt-12" style="font-family: 'Iceland', sans-serif;">Web Developer</p>
+                    <p class="text-lg md:text-xl lg:text-2xl tracking-wider" style="font-family: 'Iceland', sans-serif;">HTML | CSS | JavaScript</p>
+    
+                    <div class="mt-4 md:mt-12 flex space-x-4">
+                        <a href="https://github.com/m3ghnaa" target="_blank">
+                            <img src="assets/github.svg" class="w-6 h-6 md:w-8 md:h-8" alt="GitHub">
+                        </a>
+                        <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank">
+                            <img src="assets/linkedin.svg" class="w-6 h-6 md:w-8 md:h-8" alt="LinkedIn">
+                        </a>
+                        <a href="https://x.com/m3ghna_" target="_blank">
+                            <img src="assets/twitter.svg" class="w-6 h-6 md:w-8 md:h-8" alt="Twitter">
+                        </a>
                     </div>
-                    <button class = "view-button">View</button>
+                    <div class="mt-4 md:mt-8 p-2 px-4 text-sm rounded-full font-semibold shadow-lg cursor-pointer hover:opacity-90 transition-opacity" style="background-color: #cce3de; color:#6b9080;">Download Resume</div>
                 </div>
-                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
-                    <div class = "project-content">
-                    <h3 class="text-xl font-semibold">Sign-Up Form</h3>
-                    <p class="mt-2">Just a simple form using HTML, CSS and JS. Tried to experiment a bit with animation.</p>
+    
+                <!-- Programmer Illustration -->
+                <div class="flex items-center justify-center rounded-3xl shadow-sm p-4 col-span-1 md:col-span-2 md:row-span-2 opacity-80" style="background-color: #eaf4f4;">
+                    <img src="assets/programmer.png" class="object-cover h-64 md:h-96 w-auto rounded-full">
+                </div>
+    
+                <!-- Projects-->
+                <div class="flex flex-col rounded-3xl shadow-md p-4 col-span-1 lg:row-span-3" style="background-color: #cce3de; color: #6b9080;">
+                    <div class="flex items-center">
+                        <img src="assets/projects.svg" class="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16">
+                        <a class="text-left text-2xl md:text-3xl underline py-2 tracking-wide" style="font-family: 'Iceland', sans-serif;" href="projects.html">Projects</a>
                     </div>
-                    <button class = "view-button">View</button>
-                </div>
-                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:-rotate-6" style = "background-color: #9a8c98;">
-                    <div class = "project-content">
-                    <h3 class="text-xl font-semibold">Etch a Sketch</h3>
-                    <p class="mt-2">A drawing canvas creating using html css and js. Explored DOM Manipulation. User can change grid sizes, select colours and also download their art.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-2 mt-2">
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#task-manager">Task Manager</a>
+                        </div>
+    
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#weather-app">Weather App</a>
+                        </div>
+    
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#tetris">Tetris Game</a>
+                        </div>
+    
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#etch-a-sketch">Etch a Sketch</a>
+                        </div>
+    
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#rock-paper-scissors">Rock, Paper, Scissors</a>
+                        </div>
+    
+                        <div class="flex items-center mt-2 group">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                            <a class="pl-2 text-base md:text-lg hover:underline" href="projects.html#admin-dashboard">Admin Dashboard</a>
+                        </div>
                     </div>
-                    <button class = "view-button">View</button>
                 </div>
-                <div class="project-card w-96 h-96 bg-gray-800 p-6 shadow-lg transform hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:rotate-6" style = "background-color: #9a8c98;">
-                    <div class = "project-content">
-                    <h3 class="text-xl font-semibold">Rock Paper Scissors</h3>
-                    <p class="mt-2">The classic game. Used some DOM Manipulation to make this as interactive as possible.</p>
+    
+                <!-- Blog -->
+                <div class="flex flex-col rounded-3xl shadow-md p-4 col-span-1 lg:row-span-3" style="background-color: #cce3de; color: #6b9080;">
+                    <div class="flex items-center">
+                        <img src="assets/blog.svg" class="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16">
+                        <p class="text-left text-2xl md:text-3xl underline py-2 tracking-wide" style="font-family: 'Iceland', sans-serif;">Blog</p>
                     </div>
-                    <button class = "view-button">View</button>
+                    
+                    <div class="flex flex-col sm:flex-row md:flex-col gap-4 mt-4">
+                        <div class="flex items-center px-2 hover:opacity-80 transition-opacity">
+                            <img src="assets/hashnode.png" class="h-10 md:h-12">
+                            <p class="pl-2 text-base md:text-lg">Hashnode</p>
+                        </div>
+    
+                        <div class="flex items-center px-2 hover:opacity-80 transition-opacity">
+                            <img src="assets/medium.png" class="h-10 w-8 md:h-12 md:w-10">
+                            <p class="pl-2 text-base md:text-lg">Medium</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+    
+                <!-- Skills -->
+                <div class="flex flex-col rounded-3xl shadow-md p-4 col-span-1 md:col-span-3 lg:row-span-3" style="background-color: #cce3de; color: #6b9080;">
+                    <div class="flex items-center">
+                        <img src="assets/skills.svg" class="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16">
+                        <p class="text-left text-2xl md:text-3xl underline py-2 tracking-wide" style="font-family: 'Iceland', sans-serif;">Skills</p>
+                    </div>
 
-        <!-- Blog Section -->
-        <section id="blog" class="mb-16 text-center h-max py-24">
-            <h2 class="text-3xl font-semibold text-center slide-up tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">my blog</h2>
-            <p class = "text-xl px-32 mt-2 pt-12" style = "color:#655c64;">
-                I am not a big writer. I write only for the sake of gaining some clarity. If it helps someone who reads my articles is just a bonus. I have written a few articles on these two platforms.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-8 place-items-center w-7/12 mx-auto">
-                <div class="w-80 h-22 border-2 flex justify-center" style = "border-color: #9a8c98;;">
-                    <img src = "medium-removebg-preview.png" class = "h-32">
-                </div>
-                <div class="w-80 h-22 border-2 flex justify-center" style = "border-color: #9a8c98;;">
-                    <img src = "images-removebg-preview.png" class = "h-32">
-                </div>
-            </div>
-        </section>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4 py-2">
 
-        <!-- contact -->
-        <section id="contact" class="mb-16 text-center">
-            <h2 class="text-3xl font-semibold text-center slide-up tracking-widest" style = "color:#22223b; font-family: 'Montserrat', sans-serif;">get in touch?</h2>
-            <div class="grid grid-cols-3 gap-4 mt-24 place-items-center w-96 mx-auto pb-12">
-                <!-- LinkedIn Icon -->
-                <a href="https://www.linkedin.com" target="_blank" class="flex justify-center items-center text-3xl text-blue-600 hover:text-blue-400 transition-colors duration-300">
-                    <i class="fab fa-linkedin h-14"></i>
-                </a>
-                
-                <!-- Twitter Icon -->
-                <a href="https://twitter.com" target="_blank" class="flex justify-center items-center text-3xl text-blue-400 hover:text-blue-200 transition-colors duration-300">
-                    <i class="fab fa-twitter h-14"></i>
-                </a>
-                
-                <!-- GitHub Icon -->
-                <a href="https://github.com" target="_blank" class="flex justify-center items-center text-3xl text-gray-800 hover:text-gray-600 transition-colors duration-300">
-                    <i class="fab fa-github h-14"></i>
-                </a>
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">HTML & CSS</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 90%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">JavaScript</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 85%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">React.js</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 80%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">Tailwind CSS</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 85%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">Node.js & Express</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-yellow-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 70%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">MongoDB</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-yellow-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 50%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">Git & GitHub</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-blue-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 75%;"></div>
+                            </div>
+                        </div>
+    
+                        <div class="group opacity-100 animate-fadeIn">
+                            <p class="text-base md:text-lg">API Integration</p>
+                            <div class="w-full bg-gray-300 rounded-full h-3 md:h-4 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full progress-bar group-hover:scale-x-105 transition-transform"
+                                     style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     </div>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-    
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("a[href^='projects.html#']");
 
+  links.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.href.split("#")[1];
+      sessionStorage.setItem("scrollToProject", targetId);
+      window.location.href = this.href;
+    });
+  });
+
+
+  const targetId = sessionStorage.getItem("scrollToProject");
+  if (targetId) {
+    sessionStorage.removeItem("scrollToProject"); 
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      setTimeout(() => {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "center" 
+        });
+      }, 500);
+    }
+  }
+});
+
+
+</script>
 </body>
 </html>
