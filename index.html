@@ -12,16 +12,47 @@
     .text-custom { color: #16404D; }
 
     .triangle {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-left: 250px solid transparent;
-      border-top: 250px solid transparent;
-      border-right: 250px solid #16404D;
-      border-bottom: 250px solid #16404D;
-    }
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 20vw solid transparent;
+  border-top: 20vw solid transparent;
+  border-right: 20vw solid #16404D;
+  border-bottom: 20vw solid #16404D;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .triangle {
+    border-left-width: 22vw;
+    border-top-width: 22vw;
+    border-right-width: 22vw;
+    border-bottom-width: 22vw;
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 768px) {
+  .triangle {
+    border-left-width: 25vw;
+    border-top-width: 25vw;
+    border-right-width: 25vw;
+    border-bottom-width: 25vw;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .triangle {
+    border-left-width: 35vw;
+    border-top-width: 35vw;
+    border-right-width: 35vw;
+    border-bottom-width: 35vw;
+  }
+}
+
 
     .image-container {
       position: relative;
@@ -37,6 +68,45 @@
       border-top-right-radius: 200px;
       z-index: 0;
     }
+
+    /* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .image-bg {
+    top: 1.5rem;     /* 16px */
+    left: 5rem;    /* 64px */
+    border-top-right-radius: 13rem; /* 160px */
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 768px) {
+  .image-bg {
+    top: 2.8rem;  /* 12px */
+    left: 5rem;     /* 48px */
+    border-top-right-radius: 12rem; /* 128px */
+    height: 110%;
+  }
+}
+
+/* Small screens (adjustment for 540px) */
+@media (max-width: 640px) {
+  .image-bg {
+    top: 0.2rem;
+    left: 4rem;
+    border-top-right-radius: 12rem;
+    height: 100%;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .image-bg {
+    top: 0.1rem;   /* 8px */
+    left: 4rem;     /* 32px */
+    border-top-right-radius: 13rem; /* 96px */
+    height: 100%;
+  }
+}
     .image-content {
       position: relative;
       z-index: 1;
@@ -45,60 +115,79 @@
 </head>
 <body class="bg-gray-100">
   <!-- Navbar -->
-  <nav class="bg-white shadow-md p-2 py-8 h-24 fixed top-0 left-0 w-full z-10">
+  <nav class="bg-white shadow-md p-4 h-24 fixed top-0 left-0 w-full z-10">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#" class="text-3xl font-extrabold text-custom">m</a>
-      <ul class="flex space-x-6">
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-custom focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Navbar Links -->
+      <ul class="hidden md:flex space-x-6 py-6">
         <li><a href="#about" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">ABOUT</a></li>
         <li><a href="#projects" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">PROJECTS</a></li>
         <li><a href="#blog" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">BLOG</a></li>
         <li><a href="#contact" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">CONTACT</a></li>
       </ul>
     </div>
+
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="hidden flex-col items-center space-y-4 p-6 md:hidden bg-white shadow-md">
+      <li><a href="#about" class="text-xs font-bold text-custom hover:underline tracking-wide">ABOUT</a></li>
+      <li><a href="#projects" class="text-xs font-bold text-custom hover:underline tracking-wide">PROJECTS</a></li>
+      <li><a href="#blog" class="text-xs font-bold text-custom hover:underline tracking-wide">BLOG</a></li>
+      <li><a href="#contact" class="text-xs font-bold text-custom hover:underline tracking-wide">CONTACT</a></li>
+    </ul>
   </nav>
 
+
   <!-- Hero Section -->
-  <div class = "flex justify-center items-center h-screen flex-col">
-    <h1 class="text-6xl font-extrabold text-center tracking-wide">Hello, I'm Meghna</h1>
+   <section class = "relative h-screen">
+  <div class = "flex justify-center items-center h-full flex-col">
+    <h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold text-center tracking-wide">Hello, I'm Meghna</h1>
     <p class = "text-lg font-medium pt-8"> Web Developer </p>
     <p class = "text-lg font-medium"> HTML | CSS | JavaScript</p>
 
     <a href = "#projects" class = "text-white font-medium p-4 mt-14 rounded-lg text-md tracking-wide px-6" style = "background-color: #16404D;;"> View Projects </a>
-  
     <div class="triangle"></div>
   </div>
 
+</section>
 
   <!-- About Section -->
-  <section id="about" class="bg-gray-200 mx-auto px-24 p-8 h-screen w-screen flex flex-col justify-center">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <section id="about" class="bg-gray-200 mx-auto md:px-24 px-4 p-8 py-24 lg:py-2 lg:min-h-screen w-full flex flex-col justify-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
       <!-- About Me Column -->
-      <div>
-        <h2 class="text-xl font-bold mt-4 mb-4 tracking-widest">ABOUT ME</h2>
-        <p class="text-gray-700 mb-4 px-4 tracking-wide text-base/7 py-6">A frontend developer passionate about crafting clean, user-friendly web experiences. I work with HTML, CSS, and JavaScript to bring designs to life, always eager to learn and improve. With a background in IT support and education, I adapt quickly and enjoy solving problems through code. </p>
-        <div class="image-container w-48 h-48 mt-12">
+      <div  >
+        <h2 class="text-lg md:text-xl font-bold mt-4 mb-4 tracking-widest">ABOUT ME</h2>
+        <p class="text-sm md:text-lg text-gray-700 mb-4 px-4 tracking-wide text-base/8 md:text-base/7 py-6">A frontend developer passionate about crafting clean, user-friendly web experiences. I work with HTML, CSS, and JavaScript to bring designs to life, always eager to learn and improve. With a background in IT support and education, I adapt quickly and enjoy solving problems through code. </p>
+        <div class="image-container w-48 h-48 lg:mt-12 mx-auto">
           <div class="image-bg"></div>
-          <img src = "assets/me.png" class="image-content w-max h-64 object-cover">
+          <img src = "assets/me.png" class="image-content w-max h-48 md:h-64 object-cover">
         </div>
       </div>
       
       <!-- Skills Column -->
-      <div>
-        <h2 class="text-xl font-bold mb-4 text-center py-6 tracking-wide">My Skills</h2>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">HTML</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">CSS</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Tailwind CSS</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">JavaScript</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">React</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">PHP</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Node.js</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Express</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Responsive Web Design</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Git & GitHub</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">API Intergration</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">MongoDB</span>
-          <span class="px-4 py-2 bg-gray-700 text-white rounded-full">Figma</span>
+      <div class = "mt-12">
+        <h2 class="text-lg md:text-xl font-semibold lg:mb-2 text-center py-4 md:py-6 tracking-wide">My Skills</h2>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">HTML</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">CSS</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Tailwind CSS</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">JavaScript</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">React</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">PHP</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Node.js</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Express</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Responsive Web Design</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Git & GitHub</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">API Intergration</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">MongoDB</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Figma</span>
           
         </div>
       </div>
@@ -107,17 +196,17 @@
   </section>
 
    <!-- Projects Section -->
-   <section id="projects" class="mx-auto px-24 p-8 w-screen flex flex-col justify-center">
-    <h2 class="text-2xl font-bold mb-8 text-left pl-8 py-12 tracking-widest">MY PROJECTS</h2>
+   <section id="projects" class="mx-auto px-8 lg:px-24 p-8 w-screen flex flex-col justify-center">
+    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left lg:pl-8 py-2 lg:py-12 tracking-widest">MY PROJECTS</h2>
 
     <!--Task Manager-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
       <div>
-        <img src="assets/task-manager.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+        <img src="assets/task-manager.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Task Manager</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Task Manager</h3>
         <p class="text-gray-700 text-base/7 mt-4"> A full-stack web application that allows users to manage their daily tasks efficiently. Users can sign up, log in, and securely create, edit, complete, and delete tasks with authentication enabled by JWT tokens.</p>
         <div class = "flex items-center">
         <a href="https://github.com/m3ghnaa/task-manager" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -129,13 +218,13 @@
     </div>
 
     <!--Weather App-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
       <div>
         <img src="assets/weather-app.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Weather App</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Weather App</h3>
         <p class="text-gray-700 text-base/7 mt-4">The Weather App is a web application that provides real-time weather updates for any city. Built with React, it fetches weather data from the OpenWeatherMap API and displays essential details like temperature and weather conditions.</p>
         <div class = "flex items-center">
           <a href="https://github.com/m3ghnaa/weather-app" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -152,8 +241,8 @@
         <img src="assets/tetris.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Tetris Clone</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Tetris Clone</h3>
         <p class="text-gray-700 text-base/7 mt-4">This is a web-based Tetris game built using HTML, CSS, and JavaScript. It stays true to the classic gameplay while adding a modern touch with smooth animations and a clean interface.</p>
         <div class="flex items-center">
             <a href="https://github.com/m3ghnaa/tetris" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -170,8 +259,8 @@
         <img src="assets/etch-a-sketch.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Etch A Sketch</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Etch A Sketch</h3>
         <p class="text-gray-700 text-base/7 mt-4">Developed using HTML, CSS, and JavaScript, this project is an interactive drawing canvas that allows users to create digital art with customizable grid sizes and color selections. Built to explore DOM manipulation, the project provides an intuitive interface for users to draw, modify, and download their artwork.</p>
         <div class="flex items-center">
         <a href="https://github.com/m3ghnaa/etch-a-sketch" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -187,8 +276,8 @@
         <img src="assets/rock-paper-scissors.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Rock, Paper, Scissors</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Rock, Paper, Scissors</h3>
         <p class="text-gray-700 text-base/7 mt-4">A web-based implementation of the classic game, built using HTML, CSS, and JavaScript. This project focuses on DOM manipulation to create an interactive and engaging user experience. Players can select their move, and the game dynamically responds with the computer’s choice, determining the winner in real time.</p>
         <div class="flex items-center">
           <a href="https://github.com/m3ghnaa/rock-paper-scissors" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -204,8 +293,8 @@
         <img src="assets/dashboard.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
       </div>
       <!-- Project Details -->
-      <div class = "px-12 flex flex-col">
-        <h3 class="text-2xl font-semibold tracking-wide mt-12">Admin Dashboard Clone</h3>
+      <div class = "lg:px-12 flex flex-col">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Admin Dashboard Clone</h3>
         <p class="text-gray-700 my-4 text-base/7 mt-4">Developed as part of The Odin Project curriculum, it emphasizes modern UI design principles, efficient layout structuring with CSS Grid. <br />Note: This design is optimized for desktop and laptop screens and is not responsive for smaller devices.</p>
         <div class="flex items-center">
           <a href="https://github.com/m3ghnaa/dashboard" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
@@ -218,45 +307,55 @@
 
 
     <!-- Blog Section -->
-  <section id="blog" class="bg-gray-200 mx-auto px-24 p-8 w-screen flex flex-col justify-center pb-24">
-    <h2 class="text-2xl font-bold mb-8 text-left pl-8 py-12 tracking-widest">MY BLOG</h2>
+  <section id="blog" class="bg-gray-200 mx-auto lg:px-24 px-2 p-8 w-screen flex flex-col justify-center lg:pb-24">
+    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left pl-8 lg:py-12 py-8 tracking-widest">MY BLOG</h2>
 
     <a href = "https://m3ghna.hashnode.dev/what-is-blockchain-a-simple-overview-of-the-technology" target = "_blank">
-      <div class = "px-12">
-    <h2 class="text-lg font-medium text-right tracking-wide text-gray-800 p-2">WHAT IS BLOCKCHAIN? A SIMPLE OVERVIEW OF THE TECHNOLOGY</h2>
+      <div class = "px-8 lg:px-12">
+    <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">WHAT IS BLOCKCHAIN? A SIMPLE OVERVIEW OF THE TECHNOLOGY</h2>
     <hr class="border-t-1 border-gray-400">
-    <p class="text-gray-500 text-right w-1/2 ml-auto">This article provides an overview of blockchain technology, what it is and why was it introduced. Blockchain is a technology that allows secure,...</p>
+    <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto">This article provides an overview of blockchain technology, what it is and why was it introduced. Blockchain is a technology that allows secure,...</p>
     </div>
     </a>
 
     <a href = "https://m3ghna.hashnode.dev/interactive-web-forms-html-css-and-js-essentials" target = "_blank">
-    <div class = "px-12 mt-12">
-      <h2 class="text-lg font-medium text-right tracking-wide text-gray-800 p-2">INTERACTIVE WEB FORMS: HTML, CSS, AND JS ESSENTIALS</h2>
+    <div class = "px-8 lg:px-12 mt-12">
+      <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">INTERACTIVE WEB FORMS: HTML, CSS, AND JS ESSENTIALS</h2>
       <hr class="border-t-1 border-gray-400">
-      <p class="text-gray-500 text-right w-1/2 ml-auto">Forms are essential to web development, allowing users to interact with websites by submitting data. They are commonly used for various purposes -...</p>
+      <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto">Forms are essential to web development, allowing users to interact with websites by submitting data. They are commonly used for various purposes -...</p>
       </div>
     </a>
     
       <a href = "https://m3ghna.hashnode.dev/introduction-to-dom-manipulation-with-javascript" target = "_blank">
-    <div class = "px-12 mt-12">
-        <h2 class="text-lg font-medium text-right tracking-wide text-gray-800 p-2">INTRODUCTION TO DOM MANIPULATION WITH JAVASCRIPT</h2>
+    <div class = "px-8 lg:px-12 mt-12">
+        <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">INTRODUCTION TO DOM MANIPULATION WITH JAVASCRIPT</h2>
         <hr class="border-t-1 border-gray-400">
-        <p class="text-gray-500 text-right w-1/2 ml-auto">Javascript’s DOM Manipulation: Key to Interactive Web Design · The goal of this article is to introduce the concept of the DOM (Document Object Model)...</p>
+        <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto">Javascript’s DOM Manipulation: Key to Interactive Web Design · The goal of this article is to introduce the concept of the DOM (Document Object Model)...</p>
     </div>
     </a>
   </section>
 
    <!-- Contact Section -->
-   <section id="contact" class="mx-auto px-24 p-8 w-screen flex flex-col justify-center pb-24">
-    <h2 class="text-2xl font-bold mb-8 text-left pl-8 py-12 tracking-widest">CONTACT ME</h2>
-    <p class="text-xl text-medium text-gray-900 mb-4 tracking-wide">Interested in working together?</p>
-    <p class="text-sm text-semibold">meghna.chandrababu@gmail.com</p>
+   <section id="contact" class="mx-auto lg:px-24 px-2 p-8 w-screen flex flex-col justify-center pb-24">
+    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left pl-8 lg:py-12 pt-8 tracking-widest">CONTACT ME</h2>
+    <p class="text-md md:text-lg lg:text-xl text-medium text-gray-900 lg:mb-4 tracking-wide pl-6">Interested in working together?</p>
+    <p class="text-sm text-semibold pl-6 pt-2">meghna.chandrababu@gmail.com</p>
     <hr class="border-t-1 border-gray-600 mt-4 mb-4">
-    <div class="flex space-x-4 mt-4">
-      <a href="https://github.com/m3ghnaa" target = "_blank"><img src = "assets/github.png" class = "h-9 w-9"></a>
-      <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target = "_blank"><img src = "assets/linkedin.png" class = "h-9 w-9"></a>
-      <a href="https://x.com/m3ghna_" target = "_blank"><img src = "assets/twitter.png" class = "h-9 w-9"></a>
+    <div class="flex space-x-4 mt-4 pl-8">
+      <a href="https://github.com/m3ghnaa" target = "_blank"><img src = "assets/github.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
+      <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target = "_blank"><img src = "assets/linkedin.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
+      <a href="https://x.com/m3ghna_" target = "_blank"><img src = "assets/twitter.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
     </div>
   </section>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
