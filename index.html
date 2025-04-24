@@ -189,6 +189,7 @@ body {
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Tailwind CSS</span>
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">JavaScript</span>
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">React</span>
+          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">LLM Integration</span>
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Node.js</span>
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Express</span>
           <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Responsive Web Design</span>
@@ -203,115 +204,144 @@ body {
     </div>
   </section>
 
-   <!-- Projects Section -->
-   <section id="projects" class="mx-auto px-8 lg:px-24 p-8 w-screen flex flex-col justify-center">
-    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left lg:pl-8 py-2 lg:py-12 tracking-widest">MY PROJECTS</h2>
+  <!-- Projects Section -->
+<section id="projects" class="mx-auto px-8 lg:px-24 p-8 w-screen flex flex-col justify-center">
+  <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left lg:pl-8 py-2 lg:py-12 tracking-widest">MY PROJECTS</h2>
 
-    <!--Task Manager-->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-      <div>
-        <img src="assets/task-manager.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
-      </div>
-      <!-- Project Details -->
-      <div class = "lg:px-12 flex flex-col">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Task Manager</h3>
-        <p class="text-gray-700 text-base/7 mt-4"> A full-stack web application that allows users to manage their daily tasks efficiently. Users can sign up, log in, and securely create, edit, complete, and delete tasks with authentication enabled by JWT tokens.</p>
-        <div class = "flex items-center">
-        <a href="https://github.com/m3ghnaa/task-manager" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-        <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-        </div>
-        <a href="https://task-manager-sandy-ten-95.vercel.app/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-
-      </div>
+  <!-- Leet Insights -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-16">
+    <div>
+      <img src="assets/leet-insights.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
     </div>
-
-        <!--Crypto Wallet Generator-->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-          <div>
-            <img src="assets/cryptowallet.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-          </div>
-          <!-- Project Details -->
-          <div class = "lg:px-12 flex flex-col">
-            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Crypto Wallet Generator</h3>
-            <p class="text-gray-700 my-4 text-base/7 mt-4">This project is a working prototype for generating Ethereum (ETH) and Solana (SOL) wallets using a secure seed phrase. Built with React and Vite, it leverages the bip39 library to create mnemonic phrases, allowing users to generate and manage wallets instantly.</p>
-            <div class="flex items-center">
-              <a href="https://github.com/m3ghnaa/web3wallet" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-                  <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-                  </div>
-                <a href="https://m3ghnaa.github.io/web3wallet/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-          </div>
-        </div>
-
-    <!--Weather App-->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
-      <div>
-        <img src="assets/weather-app.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Leet Insights</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A web-based tool that provides AI-driven insights for LeetCode problems. It breaks down problem statements, explains key concepts, and offers real-world analogies and tips—helping you tackle coding questions with clarity and confidence.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, Tailwind CSS, Vite, Gemini API (via Google AI Studio)</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/leet-insights" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
       </div>
-      <!-- Project Details -->
-      <div class = "lg:px-12 flex flex-col">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Weather App</h3>
-        <p class="text-gray-700 text-base/7 mt-4">The Weather App is a web application that provides real-time weather updates for any city. Built with React, it fetches weather data from the OpenWeatherMap API and displays essential details like temperature and weather conditions.</p>
-        <div class = "flex items-center">
-          <a href="https://github.com/m3ghnaa/weather-app" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-          <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-          </div>
-          <a href="https://weathersite25.netlify.app/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-        
-      </div>
+      <a href="https://leet-insights.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
     </div>
+  </div>
 
-    <!--Tetris-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-      <div>
-        <img src="assets/tetris.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-      </div>
-      <!-- Project Details -->
-      <div class = "lg:px-12 flex flex-col">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Tetris Clone</h3>
-        <p class="text-gray-700 text-base/7 mt-4">This is a web-based Tetris game built using HTML, CSS, and JavaScript. It stays true to the classic gameplay while adding a modern touch with smooth animations and a clean interface.</p>
-        <div class="flex items-center">
-            <a href="https://github.com/m3ghnaa/tetris" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-            <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-            </div>
-          <a href="https://celebrated-scone-9c053c.netlify.app/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-        
-      </div>
+  <!-- Task Manager -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/task-manager.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
     </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Task Manager</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A full-stack web application that allows users to manage their daily tasks efficiently. Users can sign up, log in, and securely create, edit, complete, and delete tasks with authentication enabled by JWT tokens.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: Node.js, Express, MongoDB, JWT, HTML, CSS</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/task-manager" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://task-manager-sandy-ten-95.vercel.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
 
-     <!--Etch a Sketch-->
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-      <div>
-        <img src="assets/etch-a-sketch.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-      </div>
-      <!-- Project Details -->
-      <div class = "lg:px-12 flex flex-col">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Etch A Sketch</h3>
-        <p class="text-gray-700 text-base/7 mt-4">Developed using HTML, CSS, and JavaScript, this project is an interactive drawing canvas that allows users to create digital art with customizable grid sizes and color selections. Built to explore DOM manipulation, the project provides an intuitive interface for users to draw, modify, and download their artwork.</p>
-        <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/etch-a-sketch" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-            <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-            </div>
-          <a href="https://m3ghnaa.github.io/etch-a-sketch/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-      </div>
+  <!-- Crypto Wallet Generator -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/cryptowallet.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
     </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Crypto Wallet Generator</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A working prototype for generating Ethereum (ETH) and Solana (SOL) wallets using a secure seed phrase. Built with React and Vite, it leverages the bip39 library to create mnemonic phrases.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, Vite, bip39, Tailwind CSS</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/web3wallet" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://m3ghnaa.github.io/web3wallet/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
 
-    <!--Rock, Paper, Scissors-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-      <div>
-        <img src="assets/rock-paper-scissors.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-      </div>
-      <!-- Project Details -->
-      <div class = "lg:px-12 flex flex-col">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Rock, Paper, Scissors</h3>
-        <p class="text-gray-700 text-base/7 mt-4">A web-based implementation of the classic game, built using HTML, CSS, and JavaScript. This project focuses on DOM manipulation to create an interactive and engaging user experience. Players can select their move, and the game dynamically responds with the computer’s choice, determining the winner in real time.</p>
-        <div class="flex items-center">
-          <a href="https://github.com/m3ghnaa/rock-paper-scissors" target = "_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>    
-              <img src = "assets/share.png" class = "w-6 h-6 mx-2">
-              </div>
-            <a href="https://m3ghnaa.github.io/rock-paper-scissors/" target = "_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style = "background-color: #16404D;">Visit Site</a>
-      </div>
+  <!-- Weather App -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/weather-app.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
     </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Weather App</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A web application that provides real-time weather updates. Built with React, it fetches data from the OpenWeatherMap API.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, OpenWeatherMap API, CSS</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/weather-app" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://weathersite25.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
+
+  <!-- Tetris Clone -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/tetris.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+    </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Tetris Clone</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A web-based Tetris game built using HTML, CSS, and JavaScript. Classic gameplay with smooth animations and a clean UI.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/tetris" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://celebrated-scone-9c053c.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
+
+  <!-- Etch A Sketch -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/etch-a-sketch.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+    </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Etch A Sketch</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        An interactive drawing canvas with customizable grids and colors. Built to explore DOM manipulation.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/etch-a-sketch" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
+
+  <!-- Rock Paper Scissors -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
+    <div>
+      <img src="assets/rock-paper-scissors.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+    </div>
+    <div class="lg:px-12 flex flex-col">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Rock, Paper, Scissors</h3>
+      <p class="text-gray-700 text-base/7 mt-4">
+        A classic game implemented for the web using DOM manipulation. Players face off against the computer in real-time.
+        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
+      </p>
+      <div class="flex items-center">
+        <a href="https://github.com/m3ghnaa/rock-paper-scissors" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
+        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      </div>
+      <a href="https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
+    </div>
+  </div>
 </section>
+
 
 
     <!-- Blog Section -->
