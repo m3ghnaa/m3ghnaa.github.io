@@ -264,6 +264,14 @@ body {
     </div>
   </div>
 
+  <!-- View More Button -->
+<div class="flex justify-center mt-12">
+  <button id="toggleProjectsBtn" class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
+    View More
+  </button>
+</div>
+
+<div id="more-projects" class="hidden">
   <!-- Crypto Wallet Generator -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
     <div>
@@ -339,25 +347,7 @@ body {
       <a href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
     </div>
   </div>
-
-  <!-- Rock Paper Scissors -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/rock-paper-scissors.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Rock, Paper, Scissors</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A classic game implemented for the web using DOM manipulation. Players face off against the computer in real-time.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/rock-paper-scissors" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
-      </div>
-      <a href="https://m3ghnaa.github.io/rock-paper-scissors/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
+</div>
 </section>
 
 
@@ -412,6 +402,14 @@ body {
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    const btn = document.getElementById('toggleProjectsBtn');
+  const moreProjects = document.getElementById('more-projects');
+
+  btn.addEventListener('click', () => {
+    moreProjects.classList.toggle('hidden');
+    btn.textContent = moreProjects.classList.contains('hidden') ? 'View More' : 'View Less';
+  });
   </script>
 </body>
 </html>
