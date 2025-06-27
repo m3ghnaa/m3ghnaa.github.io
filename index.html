@@ -8,6 +8,8 @@
   <meta name="author" content="Meghna Chandra">
   <title>Meghna Chandra - Freelance Web Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
+
   <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,101 +21,97 @@
 <body class="bg-gray-50 text-gray-900">
 
  
-<nav class="backdrop-blur-sm p-4 fixed top-4 left-1/2 transform -translate-x-1/2 w-3/4 z-50 border-b border-gray-400 rounded-full" style = "background-color: #A7C4BC;">
-  <div class="content-max-width px-6 flex items-center justify-around h-full mx-auto relative">
-    <ul class="flex space-x-10">
-      <li>
-        <div class="group relative">
-        <a href="#about"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-user"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          About 
-        </div>
-      </div>
-      </li>
-      <li>
-        <div class="group relative">
-        <a href="#services" title="Services" aria-label="Services"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          Services
-        </div>
-      </div>
-      </li>
-      <li>
-        <div class="group relative">
-        <a href="#case-studies" title="Case Studies" aria-label="Case Studies"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-briefcase"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          Case Studies
-        </div>
-      </div>
-      </li>
-      <li>
-        <div class="group relative">
-        <a href="#projects" title="Projects" aria-label="Projects"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-folder-open"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          Projects
-        </div>
-      </div>
-      </li>
-      <li>
-        <div class="group relative">
-        <a href="#blog" title="Blog" aria-label="Blog"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-pen"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          Blog
-        </div>
-      </div>
-      </li>
-      <li>
-        <div class="group relative">
-        <a href="#contact" title="Contact" aria-label="Contact"
-           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
-          Contact
-        </div>
-      </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="backdrop-blur-sm p-2 py-4 sm:py-2 sm:p-4 fixed top-4 left-1/2 transform -translate-x-1/2 w-[88%] sm:w-3/4 z-50 border-b border-gray-400 rounded-full bg-gray-50">
+    <div class="content-max-width px-2 sm:px-6 flex items-center justify-center sm:justify-around h-full mx-auto relative">
+      <ul class="flex flex-wrap justify-center gap-4 sm:gap-10">
+        <!-- Navigation Item -->
+        <li class="group relative">
+          <a href="#about"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            About
+          </div>
+        </li>
+  
+        <!-- Repeat for other icons -->
+        <li class="group relative">
+          <a href="#services"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            Services
+          </div>
+        </li>
+  
+        <li class="group relative">
+          <a href="#case-studies"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-briefcase"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            Case Studies
+          </div>
+        </li>
+  
+        <li class="group relative">
+          <a href="#projects"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-folder-open"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            Projects
+          </div>
+        </li>
+  
+        <li class="group relative">
+          <a href="#blog"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-pen"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            Blog
+          </div>
+        </li>
+  
+        <li class="group relative">
+          <a href="#contact"
+            class="nav-link w-4 h-4 p-4 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-gray-700 text-lg sm:text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+            Contact
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
   
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-    <div class="flex justify-center items-center min-h-screen flex-col text-center px-6 pt-20">
-      <div class="max-w-4xl">
-        <h1 class="text-hero font-bold text-gray-800 mb-6">
-          Hi, I'm <span class="text-custom">Meghna</span>
-        </h1>
-        <p class="text-body text-gray-600 max-w-2xl mx-auto">
-          Freelance Web Developer
-        </p>
-        <p class="text-body text-gray-600 mb-12 max-w-2xl mx-auto">
-          Building Affordable, Custom, and Responsive Websites
-        </p>
-        <a href="#contact" class="btn-primary text-white font-medium px-8 py-4 rounded-lg text-base inline-block">
-          Start a Project
-        </a>
-        <p class="text-sm text-gray-500 mt-2">One email away.</p>
-      </div>
-      <div class="triangle"></div>
+ <!-- Hero Section -->
+<section class="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="flex justify-center items-center min-h-screen flex-col text-center px-4 sm:px-6 pt-24 sm:pt-20">
+    <div class="max-w-4xl">
+      <h1 class="text-hero font-bold text-gray-800 mb-6">
+        Hi, I'm <span class="text-custom">Meghna</span>
+      </h1>
+      
+      <!-- Typing animation line -->
+      <p class="text-lg text-gray-600 h-8 mb-4">
+        <span id="typewriter"></span>
+      </p>
+      <a href="#contact" class="btn-primary text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base inline-block">
+        Start a Project
+      </a>
+      <p class="text-xs sm:text-sm text-gray-500 mt-2">One email away.</p>
     </div>
-  </section>
+    <div class="triangle mt-12 sm:mt-16"></div>
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about" class="section-padding bg-white">
@@ -121,7 +119,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <!-- About Content -->
         <div class="order-2 lg:order-1">
-          <h2 class="text-section-title font-bold mb-8 text-gray-900">About Me</h2>
+          <h2 class="text-section-title md:text-4xl font-bold mb-6 text-gray-900">About Me</h2>
           <p class="text-body text-gray-600 mb-8 leading-relaxed">
             I'm a frontend developer passionate about building clean, user-friendly web experiences.
 I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functional, responsive websites.
@@ -164,8 +162,8 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
   <section id="services" class="section-padding bg-gray-50">
     <div class="content-max-width px-6">
       <div class="text-center mb-16">
-        <h2 class="text-section-title font-bold mb-6 text-gray-900">Services for Your Business</h2>
-        <p class="text-body text-gray-600 max-w-3xl mx-auto">
+        <h2 class="text-section-title md:text-4xl font-bold mb-6 text-gray-900">Services for Your Business</h2>
+        <p class="text-body text-gray-600 mb-8 text-sm sm:text-base mx-auto">
           From initial design to final deployment, I provide affordable web solutions built to perform and make an impact.
         </p>
       </div>
@@ -206,12 +204,14 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     </div>
   </section>
 
+  <!-- Case Studies Section -->
+
   <section id="case-studies" class="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
         <!-- Section Header -->
         <div class="text-center mb-16">
             <h2 class="text-section-title font-bold text-gray-900 mb-4">Case Studies</h2>
-            <p class="text-body text-gray-600 max-w-2xl mx-auto">Real-world solutions that make a difference</p>
+            <p class="text-body text-gray-600 mb-8 text-sm sm:text-base mx-auto">Real-world solutions that make a difference</p>
         </div>
 
         <!-- Case Studies Grid -->
@@ -225,7 +225,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
       <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Client Project</span>
       <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">1 Week</span>
     </div>
-    <h3 class="text-3xl font-bold text-gray-900 mb-4">Neo English World – Responsive Website for Online English Classes</h3>
+    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Neo English World – Responsive Website for Online English Classes</h3>
     <div class="flex flex-wrap justify-center gap-2 mb-6">
       <span class="tech-tag">HTML</span>
       <span class="tech-tag">Tailwind CSS</span>
@@ -234,18 +234,18 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     </div>
 
     <!-- Side-by-side Images -->
-    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 mb-10">
       <img src="assets/NEW-1.png" alt="Main project screenshot"
-        class="w-full md:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+        class="w-full sm:w-4/5 md:w-3/4 lg:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
       <img src="assets/NEW-2.png" alt="Secondary screenshot"
-        class="w-full md:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+        class="w-full sm:w-4/5 md:w-3/4 lg:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
     </div>
   </div>
 
   <!-- Details Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
     <div class="space-y-4">
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +258,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
         <p class="text-gray-600 text-sm leading-relaxed">Create a modern, visually appealing website for an online English coaching platform that builds trust and encourages visitors to take a free demo class.</p>
       </div>
 
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -273,7 +273,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     </div>
 
     <div class="space-y-4">
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -286,7 +286,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
         <p class="text-gray-600 text-sm leading-relaxed">Ensure the site communicates credibility and warmth while being mobile-friendly and easy to navigate. Built an engaging layout without a CMS or backend.</p>
       </div>
 
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,9 +302,9 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
   </div>
 
   <!-- Action Buttons -->
-  <div class="flex flex-col md:flex-row items-center justify-between pt-6 border-t border-gray-200">
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-200">
     <div class="flex items-center space-x-4 mb-4 md:mb-0">
-      <a href="https://neo-english-world.netlify.app/" target="_blank" class="inline-flex items-center px-4 py-2 text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg" style="background-color: #16404D;">
+      <a href="https://neo-english-world.netlify.app/" target="_blank" class="inline-flex items-center px-4 py-2 text-white text-sm md:text-base font-medium rounded-lg shadow-md hover:shadow-lg" style="background-color: #16404D;">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -333,7 +333,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
       <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Client Project</span>
       <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">1 Week</span>
     </div>
-    <h3 class="text-3xl font-bold text-gray-900 mb-4">Lakshmi Enterprise – Wix Website for Security & Automation Products</h3>
+    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Lakshmi Enterprise – Wix Website for Security & Automation Products</h3>
     <div class="flex flex-wrap justify-center gap-2 mb-6">
       <span class="tech-tag">Wix Editor</span>
       <span class="tech-tag">Wix SEO Tools</span>
@@ -343,18 +343,18 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     </div>
 
     <!-- Side-by-side Images -->
-    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 mb-10">
       <img src="assets/LE-1.png" alt="Main project screenshot"
-        class="w-full md:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+        class="w-full lg:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
       <img src="assets/LE-2.png" alt="Secondary screenshot"
-        class="w-full md:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+        class="w-full lg:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
     </div>
   </div>
 
   <!-- Details Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
     <div class="space-y-4">
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -367,7 +367,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
         <p class="text-gray-600 text-sm leading-relaxed">Create a clean, informative, and trustworthy website that highlights Lakshmi Enterprise’s wide product range—from surveillance systems to smart locks—and makes it easy for potential B2B clients to learn about and contact the business.</p>
       </div>
 
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -382,7 +382,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     </div>
 
     <div class="space-y-4">
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -397,7 +397,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
         </p>
       </div>
 
-      <div class="bg-gray-50 p-4 rounded-xl h-40">
+      <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
           <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -434,10 +434,10 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 </div>
 
         <!-- CTA Section -->
-        <div class="text-center mt-16 p-8 rounded-2xl text-white" style = "background: linear-gradient(90deg,rgba(22, 64, 77, 1) 0%, rgba(22, 64, 77, 1) 50%, rgba(167, 196, 188, 1) 100%);">
-            <h3 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
-            <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Let's discuss how we can bring your vision to life with modern, effective solutions.</p>
-            <a href = "#contact" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+        <div class="text-center mt-16 px-4 py-10 sm:py-14 rounded-2xl text-white" style = "background: linear-gradient(90deg,rgba(22, 64, 77, 1) 0%, rgba(22, 64, 77, 1) 50%, rgba(167, 196, 188, 1) 100%);">
+            <h3 class="text-lg md:text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
+            <p class="text-blue-100 mb-6 max-w-2xl mx-auto text-sm md:text-base">Let's discuss how we can bring your vision to life with modern, effective solutions.</p>
+            <a href = "#contact" class="text-sm md:text-base bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                 Get In Touch
             </a>
         </div>
@@ -448,10 +448,10 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
   <!-- Projects Section -->
   <section id="projects" class="section-padding bg-white">
-    <div class="content-max-width px-6">
+    <div class="content-max-width px-8 lg:px-6">
       <div class="text-center mb-16">
-        <h2 class="text-section-title font-bold mb-6 text-gray-900">My Projects</h2>
-        <p class="text-body text-gray-600 max-w-3xl mx-auto">
+        <h2 class="text-section-title md:text-4xl font-bold mb-6 text-gray-900">My Projects</h2>
+        <p class="text-body text-gray-600 mb-8 text-sm sm:text-base mx-auto">
           These projects demonstrate my ability to build full-stack web applications and dynamic frontends using modern web technologies.
         </p>
       </div>
@@ -570,34 +570,49 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
   </section>
 
   <!-- Blog Section -->
-  <section id="blog" class="section-padding bg-gray-50">
-    <div class="content-max-width px-6">
-      <h2 class="text-section-title font-bold mb-4 text-gray-900">Recent Articles</h2>
-      <p class="text-body text-gray-600 mb-8">Where I document what I’m learning and building</p>
-      <div class="space-y-8 max-w-4xl">
-        <a href="https://m3ghna.hashnode.dev/understanding-state-management-in-react-a-deep-dive-into-context-api" target="_blank" class="blog-item block">
-          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-card-title font-semibold text-gray-900 mb-3">Understanding State Management in React: A Deep Dive into Context API</h3>
-            <p class="text-gray-600 leading-relaxed">Understanding React’s Built-in Tool for Managing Global State · In every React Application, the state determines how components behave, how data flows...</p>
-          </div>
-        </a>
-        
-        <a href="https://m3ghna.hashnode.dev/rest-vs-graphql-which-one-should-you-use-in-your-full-stack-app" target="_blank" class="blog-item block">
-          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-card-title font-semibold text-gray-900 mb-3">REST vs GraphQL: Which One Should You Use in Your Full-Stack App?</h3>
-            <p class="text-gray-600 leading-relaxed">Choosing the Right Data Fetching Strategy for Your App · When building a full stack app, one of the core architectural choices you'll face is how your...</p>
-          </div>
-        </a>
-        
-        <a href="https://m3ghna.hashnode.dev/what-is-the-virtual-dom-and-how-does-react-use-it" target="_blank" class="blog-item block">
-          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-card-title font-semibold text-gray-900 mb-3">What is the Virtual DOM and How Does React Use It?</h3>
-            <p class="text-gray-600 leading-relaxed">How React Leverages the Virtual DOM for Efficient UI Updates · React is a JavaScript library for building user interfaces, and one of its core...</p>
-          </div>
-        </a>
-      </div>
+<section id="blog" class="section-padding bg-gray-50">
+  <div class="content-max-width px-4 sm:px-6">
+    <h2 class="text-section-title md:text-4xl font-bold mb-6 text-gray-900 text-center sm:text-left">
+      Recent Articles
+    </h2>
+    <p class="text-body text-gray-600 mb-8 text-sm sm:text-base text-center sm:text-left">
+      Where I document what I’m learning and building
+    </p>
+
+    <div class="space-y-6 sm:space-y-8 max-w-4xl">
+      <!-- Blog Post 1 -->
+      <a href="https://m3ghna.hashnode.dev/understanding-state-management-in-react-a-deep-dive-into-context-api" target="_blank" class="blog-item block">
+        <div class="bg-white p-6 sm:p-8 rounded-xl hover:shadow-lg transition">
+          <h3 class="text-card-title font-semibold text-gray-900 mb-3 text-lg sm:text-xl">Understanding State Management in React: A Deep Dive into Context API</h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            Understanding React’s Built-in Tool for Managing Global State · In every React Application, the state determines how components behave, how data flows...
+          </p>
+        </div>
+      </a>
+
+      <!-- Blog Post 2 -->
+      <a href="https://m3ghna.hashnode.dev/rest-vs-graphql-which-one-should-you-use-in-your-full-stack-app" target="_blank" class="blog-item block">
+        <div class="bg-white p-6 sm:p-8 rounded-xl hover:shadow-lg transition">
+          <h3 class="text-card-title font-semibold text-gray-900 mb-3 text-lg sm:text-xl">REST vs GraphQL: Which One Should You Use in Your Full-Stack App?</h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            Choosing the Right Data Fetching Strategy for Your App · When building a full stack app, one of the core architectural choices you'll face is how your...
+          </p>
+        </div>
+      </a>
+
+      <!-- Blog Post 3 -->
+      <a href="https://m3ghna.hashnode.dev/what-is-the-virtual-dom-and-how-does-react-use-it" target="_blank" class="blog-item block">
+        <div class="bg-white p-6 sm:p-8 rounded-xl hover:shadow-lg transition">
+          <h3 class="text-card-title font-semibold text-gray-900 mb-3 text-lg sm:text-xl">What is the Virtual DOM and How Does React Use It?</h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            How React Leverages the Virtual DOM for Efficient UI Updates · React is a JavaScript library for building user interfaces, and one of its core...
+          </p>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
    
@@ -605,29 +620,71 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     <div class="content-max-width px-6">
       <div class="text-center mb-12">
         <h2 class="text-section-title font-bold mb-6 text-gray-900">Let's Work Together</h2>
-        <img src="assets/contact.png" alt="Contact Image" class="mx-auto w-64 h-auto" />
-        <p class="text-body text-gray-600 mb-8">Ready to bring your business online?</p>
-        <p class="text-gray-600">
-          Email: <a href="mailto:meghna.chandraa@gmail.com" class="text-custom font-medium hover:underline">meghna.chandraa@gmail.com</a>
+  
+        <!-- Contact Image -->
+        <img src="assets/contact.png" alt="Contact Image"
+          class="mx-auto w-64 h-auto sm:w-72 md:w-80 lg:w-96" />
+  
+        <!-- Text -->
+        <p class="text-body text-gray-600 mb-8 mt-6 sm:mt-8">Ready to bring your business online?</p>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Email:
+          <a href="mailto:meghna.chandraa@gmail.com" class="text-custom font-medium hover:underline break-all">
+            meghna.chandraa@gmail.com
+          </a>
         </p>
       </div>
-      
-      <div class="flex justify-center space-x-6 pt-8 border-t border-gray-200">
-        <a href="https://github.com/m3ghnaa" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="GitHub Profile">
+  
+      <!-- Social Icons -->
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6 pt-8 border-t border-gray-200">
+        <a href="https://github.com/m3ghnaa" target="_blank"
+          class="p-3 rounded-lg hover:bg-gray-200 transition" style="background-color: #A7C4BC;" aria-label="GitHub Profile">
           <img src="assets/github.png" class="h-6 w-6" alt="GitHub">
         </a>
-        <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="LinkedIn Profile">
+        <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank"
+          class="p-3 rounded-lg hover:bg-gray-200 transition" style="background-color: #A7C4BC;" aria-label="LinkedIn Profile">
           <img src="assets/linkedin.png" class="h-6 w-6" alt="LinkedIn">
         </a>
-        <a href="https://x.com/m3ghna_" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="X Profile">
+        <a href="https://x.com/m3ghna_" target="_blank"
+          class="p-3 rounded-lg hover:bg-gray-200 transition" style="background-color: #A7C4BC;" aria-label="X Profile">
           <img src="assets/twitter.png" class="h-6 w-6" alt="X">
         </a>
       </div>
     </div>
   </section>
+  
 
-  <script>
 
+
+<script>
+
+const app = document.getElementById('typewriter');
+
+const typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 60,
+  deleteSpeed: 30,
+});
+
+typewriter
+  .pauseFor(500)
+  .typeString('I build websites.')
+  .pauseFor(1000)
+  .deleteAll()
+  .typeString('I write clean code.')
+  .pauseFor(1000)
+  .deleteAll()
+  .typeString('I turn ideas into websites.')
+  .pauseFor(1000)
+  .deleteAll()
+  .typeString('I work with intention.')
+  .pauseFor(1000)
+  .deleteAll()
+  .typeString('I make your brand shine.')
+  .pauseFor(1000)
+  .deleteAll()
+  .start();
+  
     const navLinks = document.querySelectorAll('.nav-link');
 
   window.addEventListener('scroll', () => {
