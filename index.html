@@ -3,459 +3,652 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meghna Chandra</title>
+  <meta name="description" content="Freelance web developer creating affordable, custom websites for small businesses and individuals. Specializing in responsive design and user-friendly solutions.">
+  <meta name="keywords" content="freelance web developer, small business websites, custom website design, responsive web design, MERN stack developer">
+  <meta name="author" content="Meghna Chandra">
+  <title>Meghna Chandra - Freelance Web Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <style>
-    html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-    .text-custom { color: #16404D; }
-
-    .triangle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-left: 20vw solid transparent;
-  border-top: 20vw solid transparent;
-  border-right: 20vw solid #16404D;
-  border-bottom: 20vw solid #16404D;
-}
-
-/* Medium screens (tablets) */
-@media (max-width: 1024px) {
-  .triangle {
-    border-left-width: 22vw;
-    border-top-width: 22vw;
-    border-right-width: 22vw;
-    border-bottom-width: 22vw;
-  }
-}
-
-/* Small screens (large phones) */
-@media (max-width: 768px) {
-  .triangle {
-    border-left-width: 25vw;
-    border-top-width: 25vw;
-    border-right-width: 25vw;
-    border-bottom-width: 25vw;
-  }
-}
-
-/* Extra small screens (phones) */
-@media (max-width: 480px) {
-  .triangle {
-    border-left-width: 35vw;
-    border-top-width: 35vw;
-    border-right-width: 35vw;
-    border-bottom-width: 35vw;
-  }
-}
-
-
-    .image-container {
-      position: relative;
-      display: inline-block;
-    }
-    .image-bg {
-      position: absolute;
-      top: 25px;
-      left: 80px;
-      width: 100%;
-      height: 120%;
-      background-color: #adacac;
-      border-top-right-radius: 200px;
-      z-index: 0;
-    }
-
-    /* Medium screens (tablets) */
-@media (max-width: 1024px) {
-  .image-bg {
-    top: 1.5rem;     /* 16px */
-    left: 5rem;    /* 64px */
-    border-top-right-radius: 13rem; /* 160px */
-  }
-}
-
-/* Small screens (large phones) */
-@media (max-width: 768px) {
-  .image-bg {
-    top: 2.8rem;  /* 12px */
-    left: 5rem;     /* 48px */
-    border-top-right-radius: 12rem; /* 128px */
-    height: 110%;
-  }
-}
-
-/* Small screens (adjustment for 540px) */
-@media (max-width: 640px) {
-  .image-bg {
-    top: 0.2rem;
-    left: 4rem;
-    border-top-right-radius: 12rem;
-    height: 100%;
-  }
-}
-
-/* Extra small screens (phones) */
-@media (max-width: 480px) {
-  .image-bg {
-    top: 0.1rem;   /* 8px */
-    left: 4rem;     /* 32px */
-    border-top-right-radius: 13rem; /* 96px */
-    height: 100%;
-  }
-}
-    .image-content {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
-<body class="bg-gray-100">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md p-4 h-24 fixed top-0 left-0 w-full z-10">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-3xl font-extrabold text-custom">m</a>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-custom focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
+<body class="bg-gray-50 text-gray-900">
 
-      <!-- Navbar Links -->
-      <ul class="hidden md:flex space-x-6 py-6">
-        <li><a href="#about" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">ABOUT</a></li>
-        <li><a href="#projects" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">PROJECTS</a></li>
-        <li><a href="#blog" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">BLOG</a></li>
-        <li><a href="#contact" class="text-sm font-bold text-custom hover:underline tracking-wide px-2">CONTACT</a></li>
-      </ul>
-    </div>
-
-    <!-- Mobile Menu -->
-    <ul id="mobile-menu" class="hidden flex-col items-center space-y-4 p-6 md:hidden bg-white shadow-md">
-      <li><a href="#about" class="text-xs font-bold text-custom hover:underline tracking-wide">ABOUT</a></li>
-      <li><a href="#projects" class="text-xs font-bold text-custom hover:underline tracking-wide">PROJECTS</a></li>
-      <li><a href="#blog" class="text-xs font-bold text-custom hover:underline tracking-wide">BLOG</a></li>
-      <li><a href="#contact" class="text-xs font-bold text-custom hover:underline tracking-wide">CONTACT</a></li>
+ 
+<nav class="backdrop-blur-sm p-4 fixed top-4 left-1/2 transform -translate-x-1/2 w-3/4 z-50 border-b border-gray-400 rounded-full" style = "background-color: #A7C4BC;">
+  <div class="content-max-width px-6 flex items-center justify-around h-full mx-auto relative">
+    <ul class="flex space-x-10">
+      <li>
+        <div class="group relative">
+        <a href="#about"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          About 
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="group relative">
+        <a href="#services" title="Services" aria-label="Services"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          Services
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="group relative">
+        <a href="#case-studies" title="Case Studies" aria-label="Case Studies"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          Case Studies
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="group relative">
+        <a href="#projects" title="Projects" aria-label="Projects"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-folder-open"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          Projects
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="group relative">
+        <a href="#blog" title="Blog" aria-label="Blog"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-pen"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          Blog
+        </div>
+      </div>
+      </li>
+      <li>
+        <div class="group relative">
+        <a href="#contact" title="Contact" aria-label="Contact"
+           class="nav-link w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-700 text-xl transition duration-200 hover:bg-custom hover:text-white hover:scale-105 shadow-sm">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <div class="absolute left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10 shadow-lg whitespace-nowrap">
+          Contact
+        </div>
+      </div>
+      </li>
     </ul>
-  </nav>
-
+  </div>
+</nav>
+  
 
   <!-- Hero Section -->
-   <section class = "relative h-screen">
-  <div class = "flex justify-center items-center h-full flex-col">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center">Hello, I'm Meghna</h1>
-    <p class = "text-md md:text-lg font-medium pt-8"> Web Developer </p>
-    <p class = "text-md md:text-lg font-medium"> HTML | CSS | JavaScript | MERN Stack</p>
-
-    <a href = "#projects" class = "text-white font-medium p-4 mt-14 rounded-lg text-md tracking-wide px-6" style = "background-color: #16404D;;"> View Projects </a>
-    <div class="triangle"></div>
-  </div>
-
-</section>
+  <section class="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="flex justify-center items-center min-h-screen flex-col text-center px-6 pt-20">
+      <div class="max-w-4xl">
+        <h1 class="text-hero font-bold text-gray-800 mb-6">
+          Hi, I'm <span class="text-custom">Meghna</span>
+        </h1>
+        <p class="text-body text-gray-600 max-w-2xl mx-auto">
+          Freelance Web Developer
+        </p>
+        <p class="text-body text-gray-600 mb-12 max-w-2xl mx-auto">
+          Building Affordable, Custom, and Responsive Websites
+        </p>
+        <a href="#contact" class="btn-primary text-white font-medium px-8 py-4 rounded-lg text-base inline-block">
+          Start a Project
+        </a>
+        <p class="text-sm text-gray-500 mt-2">One email away.</p>
+      </div>
+      <div class="triangle"></div>
+    </div>
+  </section>
 
   <!-- About Section -->
-  <section id="about" class="bg-gray-200 mx-auto md:px-24 px-4 p-8 py-24 lg:py-2 lg:min-h-screen w-full flex flex-col justify-center">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-      <!-- About Me Column -->
-      <div  >
-        <h2 class="text-lg md:text-xl font-bold mt-4 mb-4 tracking-widest">ABOUT ME</h2>
-        <p class="text-sm md:text-lg text-gray-700 mb-4 px-4 tracking-wide text-base/8 md:text-base/7 py-6">A frontend developer passionate about crafting clean, user-friendly web experiences. I work with HTML, CSS, and JavaScript to bring designs to life, always eager to learn and improve. With a background in IT support and education, I adapt quickly and enjoy solving problems through code. </p>
-        <div class="image-container w-48 h-48 lg:mt-12 mx-auto">
-          <div class="image-bg"></div>
-          <img src = "assets/me.png" class="image-content w-max h-48 md:h-64 object-cover">
+  <section id="about" class="section-padding bg-white">
+    <div class="content-max-width px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- About Content -->
+        <div class="order-2 lg:order-1">
+          <h2 class="text-section-title font-bold mb-8 text-gray-900">About Me</h2>
+          <p class="text-body text-gray-600 mb-8 leading-relaxed">
+            I'm a frontend developer passionate about building clean, user-friendly web experiences.
+I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functional, responsive websites.
+          </p>
+          <p class="text-body text-gray-600 leading-relaxed">
+            With a background in IT support and education, I enjoy solving problems through code, adapting quickly, and continuously learning. I’m currently freelancing and enjoy collaborating with individuals and small businesses on meaningful projects.
+        </div>
+        
+        <!-- Image -->
+        <div class="order-1 lg:order-2 flex justify-center">
+          <div class="image-container">
+            <div class="image-bg"></div>
+            <img src="assets/me.png" class="image-content w-64 h-80 object-cover" alt="Meghna Chandra">
+          </div>
         </div>
       </div>
       
-      <!-- Skills Column -->
-      <div class = "mt-12">
-        <h2 class="text-lg md:text-xl font-semibold lg:mb-2 text-center py-4 md:py-6 tracking-wide">My Skills</h2>
-        <div class="flex flex-wrap gap-2 justify-center">
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">HTML</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">CSS</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Tailwind CSS</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">JavaScript</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">React</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">LLM Integration</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Node.js</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Express</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Responsive Web Design</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Git & GitHub</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">API Intergration</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">MongoDB</span>
-          <span class="text-sm md:text-md px-4 py-2 bg-gray-700 text-white rounded-full">Figma</span>
-          
+      <!-- Skills Section -->
+      <div class="mt-20">
+        <h3 class="text-card-title font-semibold text-center mb-10 text-gray-900">Technical Skills</h3>
+        <div class="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">HTML</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">CSS</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Tailwind CSS</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">JavaScript</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">React</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Node.js</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Express</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">MongoDB</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">API Integration</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Responsive Design</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Git & GitHub</span>
+          <span class="px-4 py-2 bg-gray-500 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Figma</span>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-gray-50">
+    <div class="content-max-width px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-section-title font-bold mb-6 text-gray-900">Services for Your Business</h2>
+        <p class="text-body text-gray-600 max-w-3xl mx-auto">
+          From initial design to final deployment, I provide affordable web solutions built to perform and make an impact.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="service-card p-8 rounded-xl">
+          <i class="fa-brands fa-figma icon-top"></i>
+          <h3 class="text-card-title font-semibold text-custom mb-4">Figma to Code</h3>
+          <p class="text-gray-600 leading-relaxed">Turn your Figma designs into pixel-perfect, responsive websites that reflect your brand, optimized for all devices to attract and engage customers.</p>
+        </div>
+        <div class="service-card p-8 rounded-xl">
+          <i class="fa-regular fa-window-maximize icon-top"></i>
+          <h3 class="text-card-title font-semibold text-custom mb-4">Custom Website Development</h3>
+          <p class="text-gray-600 leading-relaxed">Get a unique, budget-friendly website or landing page built with HTML, CSS, JavaScript, and React to showcase your business or personal brand.</p>
+        </div>
+        <div class="service-card p-8 rounded-xl">
+          <i class="fa-solid fa-wand-magic-sparkles icon-top"></i>
+          <h3 class="text-card-title font-semibold text-custom mb-4">Frontend Fixes & Styling</h3>
+          <p class="text-gray-600 leading-relaxed">Revamp your existing website with improved design, responsiveness, and user experience to keep your visitors engaged and convert leads.</p>
+        </div>
+        <div class="service-card p-8 rounded-xl">
+          <i class="fa-solid fa-mobile-screen-button icon-top"></i>
+          <h3 class="text-card-title font-semibold text-custom mb-4">Responsive Web Design</h3>
+          <p class="text-gray-600 leading-relaxed">Ensure your website looks stunning and functions perfectly on desktops, tablets, and mobiles, providing a seamless experience for all users.</p>
+        </div>
+        <div class="service-card p-8 rounded-xl">
+          <i class="fa-solid fa-layer-group icon-top"></i>
+          <h3 class="text-card-title font-semibold text-custom mb-4">Full-Stack Solutions</h3>
+          <p class="text-gray-600 leading-relaxed">Need a dynamic website with backend functionality? I build secure, scalable applications using the MERN stack to meet your business needs.</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <a href="#contact" class="btn-primary text-white font-medium px-8 py-4 rounded-lg text-base inline-block">
+          Request a Free Quote
+        </a>
+      </div>
     </div>
   </section>
-<!-- Services Section -->
-<section id="services" class="bg-white mx-auto px-4 lg:px-24 py-16 w-screen flex flex-col justify-center">
-  <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-12 text-left tracking-widest">SERVICES I OFFER</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">Figma to Code</h3>
-      <p class="text-gray-700 text-sm md:text-base">I transform your Figma designs into pixel-perfect, fully responsive HTML, CSS, and JavaScript pages — exactly how you imagined it.</p>
+  <section id="case-studies" class="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-section-title font-bold text-gray-900 mb-4">Case Studies</h2>
+            <p class="text-body text-gray-600 max-w-2xl mx-auto">Real-world solutions that make a difference</p>
+        </div>
+
+        <!-- Case Studies Grid -->
+        <div class="space-y-16">
+            
+  <!-- Case Study - Neo English World -->
+<div class="rounded-2xl overflow-hidden p-8" style = "border: 1px solid #A7C4BC">
+  <!-- Header -->
+  <div class="mb-10 text-center">
+    <div class="flex justify-center gap-2 mb-3">
+      <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Client Project</span>
+      <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">1 Week</span>
+    </div>
+    <h3 class="text-3xl font-bold text-gray-900 mb-4">Neo English World – Responsive Website for Online English Classes</h3>
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">Tailwind CSS</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">Responsive Design</span>
     </div>
 
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">Custom Website Development</h3>
-      <p class="text-gray-700 text-sm md:text-base">Need a landing page or a complete website? I build fast, responsive, and clean websites using HTML, CSS, JavaScript, and React.</p>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">Frontend Fixes & Styling</h3>
-      <p class="text-gray-700 text-sm md:text-base">Already have a site but it needs design tweaks or layout fixes? I improve responsiveness, structure, and styling for a polished UI.</p>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">Responsive Web Design</h3>
-      <p class="text-gray-700 text-sm md:text-base">Your website should look great on all devices. I ensure mobile-friendly, fluid layouts that adapt across screen sizes.</p>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">Fullstack Projects</h3>
-      <p class="text-gray-700 text-sm md:text-base">For projects that need both frontend and backend, I use the MERN stack to create seamless, full-featured applications.</p>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-custom mb-2">API Integration</h3>
-      <p class="text-gray-700 text-sm md:text-base">Whether it's weather data, payment gateways, or custom APIs — I can fetch, display, and work with external services using JavaScript.</p>
+    <!-- Side-by-side Images -->
+    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+      <img src="assets/NEW-1.png" alt="Main project screenshot"
+        class="w-full md:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+      <img src="assets/NEW-2.png" alt="Secondary screenshot"
+        class="w-full md:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
     </div>
   </div>
-  <div class="flex justify-center mt-12">
-    <a href="mailto:meghna.chandrababu@gmail.com?subject=Request%20a%20Quote"
-       target="_blank"
-       class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white"
-       style="background-color: #16404D;">
-      Request a Quote
-    </a>
+
+  <!-- Details Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+    <div class="space-y-4">
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Goal</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Create a modern, visually appealing website for an online English coaching platform that builds trust and encourages visitors to take a free demo class.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">My Role</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Handled everything from design conceptualization to development and deployment, focusing on delivering a clean, professional interface with clear calls to action.</p>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Challenge</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Ensure the site communicates credibility and warmth while being mobile-friendly and easy to navigate. Built an engaging layout without a CMS or backend.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Impact</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Helped the brand establish a strong online identity and grow its presence through word of mouth and social media shares.</p>
+      </div>
+    </div>
   </div>
+
+  <!-- Action Buttons -->
+  <div class="flex flex-col md:flex-row items-center justify-between pt-6 border-t border-gray-200">
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+      <a href="https://neo-english-world.netlify.app/" target="_blank" class="inline-flex items-center px-4 py-2 text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg" style="background-color: #16404D;">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+        Live Demo
+      </a>
+      <a href="https://github.com/m3ghnaa/neo-english-world" target="_blank" class="inline-flex items-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        View Code
+      </a>
+    </div>
+    <div class="text-right">
+      <p class="text-xs text-gray-500">Completed</p>
+      <p class="text-sm font-semibold text-gray-700">June 2025</p>
+    </div>
+  </div>
+</div>
+   
+  <!-- Case Study - Lakshmi Enterprise -->
+<div class="rounded-2xl overflow-hidden p-8" style = "border: 1px solid #A7C4BC">
+  <!-- Header -->
+  <div class="mb-10 text-center">
+    <div class="flex justify-center gap-2 mb-3">
+      <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Client Project</span>
+      <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">1 Week</span>
+    </div>
+    <h3 class="text-3xl font-bold text-gray-900 mb-4">Lakshmi Enterprise – Wix Website for Security & Automation Products</h3>
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <span class="tech-tag">Wix Editor</span>
+      <span class="tech-tag">Wix SEO Tools</span>
+      <span class="tech-tag">Wix Visual Design</span>
+      <span class="tech-tag">Wix Responsive Design</span>
+      <span class="tech-tag">Wix No-Code Development</span>
+    </div>
+
+    <!-- Side-by-side Images -->
+    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+      <img src="assets/LE-1.png" alt="Main project screenshot"
+        class="w-full md:w-1/2 rounded-[3rem_0_3rem_0] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+      <img src="assets/LE-2.png" alt="Secondary screenshot"
+        class="w-full md:w-1/2 rounded-[0_3rem_0_3rem] border border-black shadow-xl hover:scale-105 transition-transform duration-300" />
+    </div>
+  </div>
+
+  <!-- Details Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+    <div class="space-y-4">
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Goal</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Create a clean, informative, and trustworthy website that highlights Lakshmi Enterprise’s wide product range—from surveillance systems to smart locks—and makes it easy for potential B2B clients to learn about and contact the business.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">My Role</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Handled everything from layout planning, content organization, and visual design to configuring mobile responsiveness, SEO basics, and integrations like WhatsApp — all within the Wix ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Challenge</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Customize a Wix template to align with Lakshmi Enterprise’s brand while showcasing multiple product categories in a clear, user-friendly layout. Ensured fast-loading pages, product discoverability, and simplified inquiries without using custom code or backend logic.
+
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl h-40">
+        <div class="flex items-center mb-2">
+          <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900">Impact</h4>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Established a credible online presence that has boosted client confidence and made information access seamless. The site now serves as a reliable digital portfolio when dealing with industrial clients and vendors.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="flex flex-col md:flex-row items-center justify-between pt-6 border-t border-gray-200">
+    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+      <a href="https://www.lakshmi-enterprise.com/" target="_blank" class="inline-flex items-center px-4 py-2 text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg" style="background-color: #16404D;">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+        Live Demo
+      </a>
+    </div>
+    <div class="text-right">
+      <p class="text-xs text-gray-500">Completed</p>
+      <p class="text-sm font-semibold text-gray-700">June 2024</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+        <!-- CTA Section -->
+        <div class="text-center mt-16 p-8 rounded-2xl text-white" style = "background: linear-gradient(90deg,rgba(22, 64, 77, 1) 0%, rgba(22, 64, 77, 1) 50%, rgba(167, 196, 188, 1) 100%);">
+            <h3 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
+            <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Let's discuss how we can bring your vision to life with modern, effective solutions.</p>
+            <a href = "#contact" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+                Get In Touch
+            </a>
+        </div>
+    </div>
+</section>
+  
   
 
-</section>
-
   <!-- Projects Section -->
-<section id="projects" class="mx-auto px-8 lg:px-24 p-8 w-screen flex flex-col justify-center">
-  <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left lg:pl-8 py-2 lg:py-8 tracking-widest">MY PROJECTS</h2>
-
-   <!-- Booksy -->
-   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-16">
-    <div>
-      <img src="assets/booksy.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Booksy - Book Management Web Application</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A user-friendly web application that helps book enthusiasts organize their reading journey by tracking books, viewing stats, and personalizing profiles. It features a responsive landing page, secure authentication with Google OAuth, and protected routes for user-specific functionalities like search and bookshelf management.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: MERN stack, Redux, Bootstrap, and Google OAuth</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/booksy" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
+  <section id="projects" class="section-padding bg-white">
+    <div class="content-max-width px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-section-title font-bold mb-6 text-gray-900">My Projects</h2>
+        <p class="text-body text-gray-600 max-w-3xl mx-auto">
+          These projects demonstrate my ability to build full-stack web applications and dynamic frontends using modern web technologies.
+        </p>
       </div>
-      <a href="https://booksy-shelf.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
-  <!-- Leet Insights -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-16">
-    <div>
-      <img src="assets/leet-insights.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Leet Insights</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A web-based tool that provides AI-driven insights for LeetCode problems. It breaks down problem statements, explains key concepts, and offers real-world analogies and tips—helping you tackle coding questions with clarity and confidence.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, Go, Tailwind CSS, Vite, Gemini API (via Google AI Studio)</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/leet-insights" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
+
+      <!-- Project Cards with Better Layout -->
+      <div class="space-y-20">
+        <!-- Booksy -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="project-card">
+            <img src="assets/booksy.png" alt="Booksy Project" class="w-full h-80 object-cover">
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-card-title font-semibold text-gray-900">Booksy - Book Management Web App</h3>
+            <p class="text-gray-600 leading-relaxed">
+              A user-friendly web application for book enthusiasts to organize their reading journey. Perfect for small businesses like bookstores, with features like secure authentication and responsive design.
+            </p>
+            <p class="text-small text-gray-500 font-mono">MERN stack, Redux, Bootstrap, Google OAuth</p>
+            <div class="flex items-center gap-6">
+              <a href="https://github.com/m3ghnaa/booksy" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+              <a href="https://booksy-shelf.netlify.app/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Task Manager-->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="project-card">
+            <img src="assets/task-manager.png" alt="Task Manager Project" class="w-full h-80 object-cover">
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-card-title font-semibold text-gray-900">Task Manager</h3>
+            <p class="text-gray-600 leading-relaxed">
+              A full-stack web application that allows users to manage their daily tasks efficiently. Users can sign up, log in, and securely create, edit, complete, and delete tasks with authentication enabled by JWT tokens.
+            </p>
+            <p class="text-small text-gray-500 font-mono">Node.js, Express, MongoDB, JWT, HTML, CSS</p>
+            <div class="flex items-center gap-6">
+              <a href="https://github.com/m3ghnaa/task-manager" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+              <a href="https://task-manager-sandy-ten-95.vercel.app/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+            </div>
+          </div>
+        </div>
+
+          <!--Crypto Wallet Generator-->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="project-card">
+              <img src="assets/cryptowallet.png" alt="Crypto Wallet Generator" class="w-full h-80 object-cover">
+            </div>
+            <div class="space-y-6">
+              <h3 class="text-card-title font-semibold text-gray-900">Crypto Wallet Generator</h3>
+              <p class="text-gray-600 leading-relaxed">
+                A working prototype for generating Ethereum (ETH) and Solana (SOL) wallets using a secure seed phrase. Built with React and Vite, it leverages the bip39 library to create mnemonic phrases.
+              </p>
+              <p class="text-small text-gray-500 font-mono">React, Vite, bip39, Tailwind CSS</p>
+              <div class="flex items-center gap-6">
+                <a href="https://github.com/m3ghnaa/web3wallet" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+                <a href="https://m3ghnaa.github.io/web3wallet/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+              </div>
+            </div>
+          </div>
+
+      <!--Weather App-->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="project-card">
+          <img src="assets/weather-app.png" alt="Weather App" class="w-full h-80 object-cover">
+        </div>
+        <div class="space-y-6">
+          <h3 class="text-card-title font-semibold text-gray-900">Weather App</h3>
+          <p class="text-gray-600 leading-relaxed">
+            A web application that provides real-time weather updates. Built with React, it fetches data from the OpenWeatherMap API.
+          </p>
+          <p class="text-small text-gray-500 font-mono">React, OpenWeatherMap API, CSS</p>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/m3ghnaa/weather-app" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+            <a href="https://weathersite25.netlify.app/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+          </div>
+        </div>
       </div>
-      <a href="https://leet-insights.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
 
-  <!-- Task Manager -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/task-manager.png" alt="Project Image" class="w-full h-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Task Manager</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A full-stack web application that allows users to manage their daily tasks efficiently. Users can sign up, log in, and securely create, edit, complete, and delete tasks with authentication enabled by JWT tokens.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: Node.js, Express, MongoDB, JWT, HTML, CSS</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/task-manager" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
+       <!--Tetris Clone-->
+       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="project-card">
+          <img src="assets/tetris.png" alt="Tetris Clone" class="w-full h-80 object-cover">
+        </div>
+        <div class="space-y-6">
+          <h3 class="text-card-title font-semibold text-gray-900">Tetris Clone</h3>
+          <p class="text-gray-600 leading-relaxed">
+            A web-based Tetris game built using HTML, CSS, and JavaScript. Classic gameplay with smooth animations and a clean UI.
+          </p>
+          <p class="text-small text-gray-500 font-mono">HTML, CSS, JavaScript</p>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/m3ghnaa/tetris" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+            <a href="https://celebrated-scone-9c053c.netlify.app/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+          </div>
+        </div>
       </div>
-      <a href="https://task-manager-sandy-ten-95.vercel.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
 
-  <!-- View More Button -->
-<div class="flex justify-center mt-12">
-  <button id="toggleProjectsBtn" class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700">
-    View More
-  </button>
-</div>
-
-<div id="more-projects" class="hidden">
-  <!-- Crypto Wallet Generator -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/cryptowallet.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Crypto Wallet Generator</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A working prototype for generating Ethereum (ETH) and Solana (SOL) wallets using a secure seed phrase. Built with React and Vite, it leverages the bip39 library to create mnemonic phrases.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, Vite, bip39, Tailwind CSS</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/web3wallet" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
+      <!--Etch A Sketch-->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="project-card">
+          <img src="assets/etch-a-sketch.png" alt="Etch A Sketch" class="w-full h-80 object-cover">
+        </div>
+        <div class="space-y-6">
+          <h3 class="text-card-title font-semibold text-gray-900">Etch A Sketch</h3>
+          <p class="text-gray-600 leading-relaxed">
+            An interactive drawing canvas with customizable grids and colors. Built to explore DOM manipulation.
+          </p>
+          <p class="text-small text-gray-500 font-mono">HTML, CSS, JavaScript</p>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/m3ghnaa/etch-a-sketch" target="_blank" class="text-custom font-medium hover:underline transition">View Code →</a>
+            <a href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank" class="btn-primary text-white px-6 py-3 rounded-lg text-sm">Visit Site</a>
+          </div>
+        </div>
       </div>
-      <a href="https://m3ghnaa.github.io/web3wallet/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
 
-  <!-- Weather App -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/weather-app.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Weather App</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A web application that provides real-time weather updates. Built with React, it fetches data from the OpenWeatherMap API.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: React, OpenWeatherMap API, CSS</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/weather-app" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
-      </div>
-      <a href="https://weathersite25.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
-
-  <!-- Tetris Clone -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/tetris.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Tetris Clone</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        A web-based Tetris game built using HTML, CSS, and JavaScript. Classic gameplay with smooth animations and a clean UI.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/tetris" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
-      </div>
-      <a href="https://celebrated-scone-9c053c.netlify.app/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
-
-  <!-- Etch A Sketch -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-24">
-    <div>
-      <img src="assets/etch-a-sketch.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
-    </div>
-    <div class="lg:px-12 flex flex-col">
-      <h3 class="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide lg:mt-12 mt-4">Etch A Sketch</h3>
-      <p class="text-gray-700 text-base/7 mt-4">
-        An interactive drawing canvas with customizable grids and colors. Built to explore DOM manipulation.
-        <br><span class="text-sm text-gray-600 mt-2 block">Tech Stack: HTML, CSS, JavaScript</span>
-      </p>
-      <div class="flex items-center">
-        <a href="https://github.com/m3ghnaa/etch-a-sketch" target="_blank" class="py-6 rounded-lg text-custom font-medium hover:underline">View Code</a>
-        <img src="assets/share.png" class="w-6 h-6 mx-2">
-      </div>
-      <a href="https://m3ghnaa.github.io/etch-a-sketch/" target="_blank" class="text-center w-48 mb-12 px-4 py-2 rounded-lg text-white" style="background-color: #16404D;">Visit Site</a>
-    </div>
-  </div>
-</div>
-</section>
-
-
-
-    <!-- Blog Section -->
-  <section id="blog" class="bg-gray-200 mx-auto lg:px-24 px-2 p-8 w-screen flex flex-col justify-center lg:pb-24">
-    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left pl-8 lg:py-12 py-8 tracking-widest">MY BLOG</h2>
-
-    <a href = "https://m3ghna.hashnode.dev/what-is-blockchain-a-simple-overview-of-the-technology" target = "_blank">
-      <div class = "px-8 lg:px-12">
-    <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">WHAT IS BLOCKCHAIN? A SIMPLE OVERVIEW OF THE TECHNOLOGY</h2>
-    <hr class="border-t-1 border-gray-400">
-    <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto pt-2">This article provides an overview of blockchain technology, what it is and why was it introduced. Blockchain is a technology that allows secure,...</p>
-    </div>
-    </a>
-
-    <a href = "https://m3ghna.hashnode.dev/interactive-web-forms-html-css-and-js-essentials" target = "_blank">
-    <div class = "px-8 lg:px-12 mt-12">
-      <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">INTERACTIVE WEB FORMS: HTML, CSS, AND JS ESSENTIALS</h2>
-      <hr class="border-t-1 border-gray-400">
-      <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto pt-2">Forms are essential to web development, allowing users to interact with websites by submitting data. They are commonly used for various purposes -...</p>
-      </div>
-    </a>
-    
-      <a href = "https://m3ghna.hashnode.dev/introduction-to-dom-manipulation-with-javascript" target = "_blank">
-    <div class = "px-8 lg:px-12 mt-12">
-        <h2 class="text-md md:text-lg font-medium text-right tracking-wide text-gray-800 lg:p-2">INTRODUCTION TO DOM MANIPULATION WITH JAVASCRIPT</h2>
-        <hr class="border-t-1 border-gray-400">
-        <p class="text-sm md:text-md text-gray-500 text-right lg:w-1/2 ml-auto pt-2">Javascript’s DOM Manipulation: Key to Interactive Web Design · The goal of this article is to introduce the concept of the DOM (Document Object Model)...</p>
-    </div>
-    </a>
-  </section>
-
-   <!-- Contact Section -->
-   <section id="contact" class="mx-auto lg:px-24 px-2 p-8 w-screen flex flex-col justify-center pb-24">
-    <h2 class="text-lg md:text-xl lg:text-2xl font-bold mb-8 text-left pl-8 lg:py-12 pt-8 tracking-widest">CONTACT ME</h2>
-    <p class="text-md md:text-lg lg:text-xl text-medium text-gray-900 lg:mb-4 tracking-wide pl-6">Interested in working together?</p>
-    <p class="text-sm text-semibold pl-6 pt-2">meghna.chandrababu@gmail.com</p>
-    <hr class="border-t-1 border-gray-600 mt-4 mb-4">
-    <div class="flex space-x-4 mt-4 pl-8">
-      <a href="https://github.com/m3ghnaa" target = "_blank"><img src = "assets/github.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
-      <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target = "_blank"><img src = "assets/linkedin.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
-      <a href="https://x.com/m3ghna_" target = "_blank"><img src = "assets/twitter.png" class = "h-6 w-6 md:h-9 md:w-9"></a>
     </div>
   </section>
 
+  <!-- Blog Section -->
+  <section id="blog" class="section-padding bg-gray-50">
+    <div class="content-max-width px-6">
+      <h2 class="text-section-title font-bold mb-4 text-gray-900">Recent Articles</h2>
+      <p class="text-body text-gray-600 mb-8">Where I document what I’m learning and building</p>
+      <div class="space-y-8 max-w-4xl">
+        <a href="https://m3ghna.hashnode.dev/understanding-state-management-in-react-a-deep-dive-into-context-api" target="_blank" class="blog-item block">
+          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
+            <h3 class="text-card-title font-semibold text-gray-900 mb-3">Understanding State Management in React: A Deep Dive into Context API</h3>
+            <p class="text-gray-600 leading-relaxed">Understanding React’s Built-in Tool for Managing Global State · In every React Application, the state determines how components behave, how data flows...</p>
+          </div>
+        </a>
+        
+        <a href="https://m3ghna.hashnode.dev/rest-vs-graphql-which-one-should-you-use-in-your-full-stack-app" target="_blank" class="blog-item block">
+          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
+            <h3 class="text-card-title font-semibold text-gray-900 mb-3">REST vs GraphQL: Which One Should You Use in Your Full-Stack App?</h3>
+            <p class="text-gray-600 leading-relaxed">Choosing the Right Data Fetching Strategy for Your App · When building a full stack app, one of the core architectural choices you'll face is how your...</p>
+          </div>
+        </a>
+        
+        <a href="https://m3ghna.hashnode.dev/what-is-the-virtual-dom-and-how-does-react-use-it" target="_blank" class="blog-item block">
+          <div class="bg-white p-8 rounded-xl hover:shadow-lg transition">
+            <h3 class="text-card-title font-semibold text-gray-900 mb-3">What is the Virtual DOM and How Does React Use It?</h3>
+            <p class="text-gray-600 leading-relaxed">How React Leverages the Virtual DOM for Efficient UI Updates · React is a JavaScript library for building user interfaces, and one of its core...</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+   
+  <section id="contact" class="section-padding bg-white">
+    <div class="content-max-width px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-section-title font-bold mb-6 text-gray-900">Let's Work Together</h2>
+        <img src="assets/contact.png" alt="Contact Image" class="mx-auto w-64 h-auto" />
+        <p class="text-body text-gray-600 mb-8">Ready to bring your business online?</p>
+        <p class="text-gray-600">
+          Email: <a href="mailto:meghna.chandrababu@gmail.com" class="text-custom font-medium hover:underline">meghna.chandrababu@gmail.com</a>
+        </p>
+      </div>
+      
+      <div class="flex justify-center space-x-6 pt-8 border-t border-gray-200">
+        <a href="https://github.com/m3ghnaa" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="GitHub Profile">
+          <img src="assets/github.png" class="h-6 w-6" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/meghna-chandra-5b9324224/" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="LinkedIn Profile">
+          <img src="assets/linkedin.png" class="h-6 w-6" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/m3ghna_" target="_blank" class="p-3 rounded-lg hover:bg-gray-200 transition" style = "background-color: #A7C4BC;" aria-label="X Profile">
+          <img src="assets/twitter.png" class="h-6 w-6" alt="X">
+        </a>
+      </div>
+    </div>
+  </section>
 
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    const btn = document.getElementById('toggleProjectsBtn');
-  const moreProjects = document.getElementById('more-projects');
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 100; // 100 for slight offset
 
-  btn.addEventListener('click', () => {
-    moreProjects.classList.toggle('hidden');
-    btn.textContent = moreProjects.classList.contains('hidden') ? 'View More' : 'View Less';
+    navLinks.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+
+    if (
+      section &&
+      section.offsetTop <= scrollPos &&
+      section.offsetTop + section.offsetHeight > scrollPos
+    ) {
+      link.classList.add('bg-[#A7C4BC]', 'text-white');
+      link.classList.remove('bg-white', 'text-gray-700');
+    } else {
+      link.classList.remove('bg-[#A7C4BC]', 'text-white');
+      link.classList.add('bg-white', 'text-gray-700');
+    }
   });
+});
   </script>
 </body>
 </html>
