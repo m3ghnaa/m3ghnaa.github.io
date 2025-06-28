@@ -6,7 +6,7 @@
   <meta name="description" content="Freelance web developer creating affordable, custom websites for small businesses and individuals. Specializing in responsive design and user-friendly solutions.">
   <meta name="keywords" content="freelance web developer, small business websites, custom website design, responsive web design, MERN stack developer">
   <meta name="author" content="Meghna Chandra">
-  <title>Meghna Chandra | Web Developer & Creative Technologist</title>
+  <title>Meghna Chandra | Freelance Web Developer</title>
   <meta name="description" content="Meghna Chandra is a frontend web developer. Explore her work, projects, and get in touch for collaborations.">
   <meta name="robots" content="index, follow">
 
@@ -46,6 +46,7 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,9 +130,14 @@
   
 
  <!-- Hero Section -->
-<section class="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+ <section class="relative min-h-screen bg-gradient-to-br from-[#F5F5F5] to-[#E2E8F0] overflow-hidden">
+  <div id="particles-js" class="absolute inset-0 z-10"></div>
+  <div class="absolute top-0 left-0 w-full h-full transform -skew-y-6 bg-[#8A9A5B] opacity-10"></div>
+  <div class="absolute top-[-5rem] left-[-5rem] w-72 h-72 bg-[#8A9A5B] opacity-20 rounded-full blur-3xl z-0"></div>
+<div class="absolute bottom-[-5rem] right-[-5rem] w-96 h-96 bg-[#16404D] opacity-20 rounded-full blur-3xl z-0"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#8A9A5B_1px,transparent_1px)] bg-[length:20px_20px] opacity-10"></div>
   <div class="flex justify-center items-center min-h-screen flex-col text-center px-4 sm:px-6 pt-24 sm:pt-20">
-    <div class="max-w-4xl">
+    <div class="max-w-4xl z-10">
       <h1 class="text-hero font-bold text-gray-800 mb-6">
         Hi, I'm <span class="text-custom">Meghna</span>
       </h1>
@@ -145,7 +151,16 @@
       </a>
       <p class="text-xs sm:text-sm text-gray-500 mt-2">One email away.</p>
     </div>
-    <div class="triangle mt-12 sm:mt-16"></div>
+
+<!-- Scroll Indicator: Mouse Icon -->
+<div id="scroll-indicator" class="absolute bottom-6 sm:bottom-10 flex justify-center w-full transition-opacity duration-500">
+  <div class="flex flex-col items-center gap-2 text-gray-400">
+    <!-- Mouse -->
+    <div class=" animate-bounce w-7 h-10 rounded-full border-2 border-gray-600 flex justify-center items-start p-1">
+      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 
@@ -284,7 +299,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     <div class="space-y-4">
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -297,7 +312,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
@@ -312,7 +327,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     <div class="space-y-4">
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -325,7 +340,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -393,7 +408,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     <div class="space-y-4">
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -406,7 +421,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
@@ -421,7 +436,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
     <div class="space-y-4">
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -436,7 +451,7 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
       <div class="bg-gray-50 p-4 rounded-xl min-h-[10rem] md:min-h-[10rem] lg:min-h-[10rem]">
         <div class="flex items-center mb-2">
-          <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+          <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3">
             <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -694,6 +709,44 @@ I work with HTML, CSS, JavaScript, and the MERN stack to turn ideas into functio
 
 
 <script>
+
+particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#8A9A5B" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": true },
+      "size": { "value": 4, "random": true },
+      "line_linked": { "enable": true, "distance": 120, "color": "#8A9A5B", "opacity": 0.3, "width": 1.5 },
+      "move": {
+        "enable": true, "speed": 5, "direction": "none",
+        "random": false, "straight": false, "out_mode": "out", "attract": { "enable": false }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": false }
+      },
+      "modes": {
+        "repulse": { "distance": 100, "duration": 0.4 }
+      }
+    },
+    "retina_detect": true
+  });
+
+const scrollIndicator = document.getElementById("scroll-indicator");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+
+  if (scrollTop > 80) {
+    scrollIndicator.classList.add("opacity-0", "pointer-events-none");
+  } else {
+    scrollIndicator.classList.remove("opacity-0", "pointer-events-none");
+  }
+});
 
 const app = document.getElementById('typewriter');
 
