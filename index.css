@@ -88,17 +88,32 @@
     .contact-section .social-link { border: 1px solid #cfddd6; background: #f1f5f1 !important; }
 
     @media (max-width: 768px) {
-      body { padding-bottom: 5.8rem; }
-      nav { top: auto !important; bottom: 1rem; width: calc(100% - 1.5rem) !important; padding: .45rem !important; border-bottom: 1px solid #aeb9bd; }
+      body { padding-bottom: 5rem; }
+      nav { top: auto !important; bottom: .35rem; width: calc(100% - 1.5rem) !important; padding: .45rem !important; border-bottom: 1px solid #aeb9bd; }
       nav .content-max-width { width: 100%; padding-left: 0 !important; padding-right: 0 !important; }
       nav ul { width: 100%; flex-wrap: nowrap; justify-content: space-between; gap: .25rem !important; }
       nav li { flex: 1 1 0%; min-width: 0; }
       nav .nav-link { width: 100%; min-height: 3.35rem; flex-direction: column; gap: .28rem; padding: .55rem .15rem; border-radius: .85rem; font-size: .75rem; line-height: 1; }
       nav .nav-link i { font-size: 1rem; }
       nav .nav-link span { font-size: .64rem; letter-spacing: .01em; }
-      .hero-content { align-items: flex-start; }
+      .hero-section { min-height: auto !important; }
+      .hero-content { min-height: auto !important; align-items: flex-start; padding-top: 5.5rem !important; padding-bottom: 2rem !important; }
+      .hero-content > .grid { min-height: auto !important; gap: 2.25rem; align-items: start; }
       .hero-title { font-size: clamp(3rem, 14vw, 5rem); }
-      .solution-map { min-height: 27rem; margin-top: -1rem; transform: scale(.9); transform-origin: top center; }
+      .solution-map { width: min(100%, 24rem); min-height: 23rem; margin-top: 0; transform: none; }
+      .solution-map-label { top: .25rem; left: .35rem; }
+      .solution-core { width: 8rem; height: 8rem; }
+      .solution-core i { font-size: 2.1rem; margin-bottom: .4rem; }
+      .solution-core small { font-size: .62rem; }
+      .solution-card { min-width: 7.3rem; padding: .75rem; }
+      .solution-card strong { font-size: .85rem; }
+      .solution-card small { font-size: .64rem; }
+      .solution-card-problem { top: 3.5rem; left: 0; }
+      .solution-card-explore { top: 3.5rem; right: 0; }
+      .solution-card-build { bottom: 2.5rem; left: .4rem; }
+      .solution-card-improve { right: .4rem; bottom: 2.5rem; }
+      .solution-line-one { top: 7.5rem; }
+      .solution-line-two { bottom: 6rem; }
       .principles-grid { grid-template-columns: 1fr; }
       .principle-card { min-height: auto; }
       .principle-index { margin-bottom: 1.4rem; }
